@@ -1,0 +1,20 @@
+import PIL
+from PIL import Image
+from PIL import Image
+import numpy as np
+from numpy import asarray
+
+
+# load the image
+image = Image.open('pic3.png')
+image = image.convert('L')
+# convert image to numpy array
+data = asarray(image)
+print(type(data))
+# summarize shape
+print(data.shape)
+print(data)
+np.savetxt('text.txt',data,fmt='%s')
+with open('matrix.txt', 'w') as testfile:
+    for row in data:
+        testfile.write("(" +", ".join([str(a) for a in row]) + "),\n")
