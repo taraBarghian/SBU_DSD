@@ -1,0 +1,23 @@
+# Reading D:/Program/ArchStuff/modelsim_ase/tcl/vsim/pref.tcl
+# do ShiftRegister_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/Program/ArchStuff/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Uni/Term6/DSD/ex/ex5/v2 {D:/Uni/Term6/DSD/ex/ex5/v2/de0_nano_soc_baseline.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:06:22 on May 11,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Uni/Term6/DSD/ex/ex5/v2" D:/Uni/Term6/DSD/ex/ex5/v2/de0_nano_soc_baseline.v 
+# -- Compiling module de0_nano_soc_baseline
+# 
+# Top level modules:
+# 	de0_nano_soc_baseline
+# End time: 00:06:22 on May 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 

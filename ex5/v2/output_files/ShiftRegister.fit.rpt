@@ -1,0 +1,184 @@
+Fitter report for ShiftRegister
+Mon May 10 22:02:49 2021
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Fitter Device Options
+  6. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Fitter Summary                                                                    ;
++---------------------------------+-------------------------------------------------+
+; Fitter Status                   ; Failed - Mon May 10 22:02:49 2021               ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
+; Revision Name                   ; ShiftRegister                                   ;
+; Top-level Entity Name           ; de0_nano_soc_baseline                           ;
+; Family                          ; Cyclone V                                       ;
+; Device                          ; 5CSEMA4U23C6                                    ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 0                                               ;
+; Total pins                      ; 17                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total RAM Blocks                ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                                                                            ;
++----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
+; Option                                                                     ; Setting                               ; Default Value                         ;
++----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
+; Device                                                                     ; 5CSEMA4U23C6                          ;                                       ;
+; Minimum Core Junction Temperature                                          ; 0                                     ;                                       ;
+; Maximum Core Junction Temperature                                          ; 85                                    ;                                       ;
+; Device I/O Standard                                                        ; 2.5 V                                 ;                                       ;
+; Use smart compilation                                                      ; Off                                   ; Off                                   ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                                    ; On                                    ;
+; Enable compact report table                                                ; Off                                   ; Off                                   ;
+; Router Timing Optimization Level                                           ; Normal                                ; Normal                                ;
+; Perform Clocking Topology Analysis During Routing                          ; Off                                   ; Off                                   ;
+; Placement Effort Multiplier                                                ; 1.0                                   ; 1.0                                   ;
+; Device initialization clock source                                         ; INIT_INTOSC                           ; INIT_INTOSC                           ;
+; Optimize Hold Timing                                                       ; All Paths                             ; All Paths                             ;
+; Optimize Multi-Corner Timing                                               ; On                                    ; On                                    ;
+; Auto RAM to MLAB Conversion                                                ; On                                    ; On                                    ;
+; Equivalent RAM and MLAB Power Up                                           ; Auto                                  ; Auto                                  ;
+; Equivalent RAM and MLAB Paused Read Capabilities                           ; Care                                  ; Care                                  ;
+; Power Optimization During Fitting                                          ; Normal compilation                    ; Normal compilation                    ;
+; SSN Optimization                                                           ; Off                                   ; Off                                   ;
+; Optimize Timing                                                            ; Normal compilation                    ; Normal compilation                    ;
+; Optimize Timing for ECOs                                                   ; Off                                   ; Off                                   ;
+; Regenerate Full Fit Report During ECO Compiles                             ; Off                                   ; Off                                   ;
+; Optimize IOC Register Placement for Timing                                 ; Normal                                ; Normal                                ;
+; Final Placement Optimizations                                              ; Automatically                         ; Automatically                         ;
+; Fitter Aggressive Routability Optimizations                                ; Automatically                         ; Automatically                         ;
+; Fitter Initial Placement Seed                                              ; 1                                     ; 1                                     ;
+; Periphery to Core Placement and Routing Optimization                       ; Off                                   ; Off                                   ;
+; Weak Pull-Up Resistor                                                      ; Off                                   ; Off                                   ;
+; Enable Bus-Hold Circuitry                                                  ; Off                                   ; Off                                   ;
+; Auto Packed Registers                                                      ; Auto                                  ; Auto                                  ;
+; Auto Delay Chains                                                          ; On                                    ; On                                    ;
+; Auto Delay Chains for High Fanout Input Pins                               ; Off                                   ; Off                                   ;
+; Treat Bidirectional Pin as Output Pin                                      ; Off                                   ; Off                                   ;
+; Perform Physical Synthesis for Combinational Logic for Fitting             ; Off                                   ; Off                                   ;
+; Perform Physical Synthesis for Combinational Logic for Performance         ; Off                                   ; Off                                   ;
+; Perform Register Duplication for Performance                               ; Off                                   ; Off                                   ;
+; Perform Register Retiming for Performance                                  ; Off                                   ; Off                                   ;
+; Perform Asynchronous Signal Pipelining                                     ; Off                                   ; Off                                   ;
+; Fitter Effort                                                              ; Auto Fit                              ; Auto Fit                              ;
+; Physical Synthesis Effort Level                                            ; Normal                                ; Normal                                ;
+; Logic Cell Insertion - Logic Duplication                                   ; Auto                                  ; Auto                                  ;
+; Auto Register Duplication                                                  ; Auto                                  ; Auto                                  ;
+; Auto Global Clock                                                          ; On                                    ; On                                    ;
+; Auto Global Register Control Signals                                       ; On                                    ; On                                    ;
+; Reserve all unused pins                                                    ; As input tri-stated with weak pull-up ; As input tri-stated with weak pull-up ;
+; Synchronizer Identification                                                ; Auto                                  ; Auto                                  ;
+; Enable Beneficial Skew Optimization                                        ; On                                    ; On                                    ;
+; Optimize Design for Metastability                                          ; On                                    ; On                                    ;
+; Active Serial clock source                                                 ; FREQ_100MHz                           ; FREQ_100MHz                           ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off                                   ; Off                                   ;
+; Clamping Diode                                                             ; Off                                   ; Off                                   ;
+; Enable input tri-state on active configuration pins in user mode           ; Off                                   ; Off                                   ;
+; Advanced Physical Optimization                                             ; On                                    ; On                                    ;
++----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Fitter Device Options                                                                         ;
++------------------------------------------------------------------+----------------------------+
+; Option                                                           ; Setting                    ;
++------------------------------------------------------------------+----------------------------+
+; Enable user-supplied start-up clock (CLKUSR)                     ; Off                        ;
+; Enable device-wide reset (DEV_CLRn)                              ; Off                        ;
+; Enable device-wide output enable (DEV_OE)                        ; Off                        ;
+; Enable INIT_DONE output                                          ; Off                        ;
+; Configuration scheme                                             ; Passive Serial             ;
+; Enable Error Detection CRC_ERROR pin                             ; Off                        ;
+; Enable CvP_CONFDONE pin                                          ; Off                        ;
+; Enable open drain on CRC_ERROR pin                               ; Off                        ;
+; Enable open drain on CvP_CONFDONE pin                            ; On                         ;
+; Enable open drain on INIT_DONE pin                               ; On                         ;
+; Enable open drain on Partial Reconfiguration pins                ; Off                        ;
+; Enable open drain on nCEO pin                                    ; On                         ;
+; Enable Partial Reconfiguration pins                              ; Off                        ;
+; Enable input tri-state on active configuration pins in user mode ; Off                        ;
+; Enable internal scrubbing                                        ; Off                        ;
+; Active Serial clock source                                       ; 40 MHz Internal Oscillator ;
+; Device initialization clock source                               ; Internal Oscillator        ;
+; Configuration via Protocol                                       ; Off                        ;
+; Configuration Voltage Level                                      ;                            ;
+; Force Configuration Voltage Level                                ; Off                        ;
+; Enable nCEO output                                               ; Off                        ;
+; Data[15..8]                                                      ; Unreserved                 ;
+; Data[7..5]                                                       ; Unreserved                 ;
+; Base pin-out file on sameframe device                            ; Off                        ;
++------------------------------------------------------------------+----------------------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning (292000): FLEXlm software error: Invalid (inconsistent) license key.  The license key and data for the feature do not match.  This usually happens when a license file has been altered. Feature:       quartus License path:  D:\Program\quartus17\Crack\license.dat; FlexNet Licensing error:-8,523 For further information, refer to the FlexNet Licensing documentation, available at "www.flexerasoftware.com"..
+Error (119013): Current license file does not support the 5CSEMA4U23C6 device. Go to the Self-Service Licensing Center on the Intel FPGA website to manage your licenses (https://mysupport.altera.com/AlteraLicensing/license/index.html). 
+Error: Quartus Prime Fitter was unsuccessful. 1 error, 2 warnings
+    Error: Peak virtual memory: 4924 megabytes
+    Error: Processing ended: Mon May 10 22:02:49 2021
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
+
+
