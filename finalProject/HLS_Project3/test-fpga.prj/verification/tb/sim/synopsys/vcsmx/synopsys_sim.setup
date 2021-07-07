@@ -1,0 +1,32 @@
+
+WORK > DEFAULT
+DEFAULT:                                     ./libraries/work/                                       
+work:                                        ./libraries/work/                                       
+altera_common_sv_packages:                   ./libraries/altera_common_sv_packages/                  
+tb_count_internal_10:                        ./libraries/tb_count_internal_10/                       
+tb_altera_irq_mapper_191:                    ./libraries/tb_altera_irq_mapper_191/                   
+tb_hls_sim_stream_source_dpi_bfm_10:         ./libraries/tb_hls_sim_stream_source_dpi_bfm_10/        
+tb_avalon_split_multibit_conduit_10:         ./libraries/tb_avalon_split_multibit_conduit_10/        
+tb_hls_sim_mm_slave_dpi_bfm_10:              ./libraries/tb_hls_sim_mm_slave_dpi_bfm_10/             
+tb_hls_sim_main_dpi_controller_10:           ./libraries/tb_hls_sim_main_dpi_controller_10/          
+tb_count_10:                                 ./libraries/tb_count_10/                                
+tb_avalon_conduit_fanout_10:                 ./libraries/tb_avalon_conduit_fanout_10/                
+tb_avalon_concatenate_singlebit_conduits_10: ./libraries/tb_avalon_concatenate_singlebit_conduits_10/
+tb_hls_sim_component_dpi_controller_10:      ./libraries/tb_hls_sim_component_dpi_controller_10/     
+tb_hls_sim_clock_reset_10:                   ./libraries/tb_hls_sim_clock_reset_10/                  
+altera_ver:                                  ./libraries/altera_ver/                                 
+lpm_ver:                                     ./libraries/lpm_ver/                                    
+sgate_ver:                                   ./libraries/sgate_ver/                                  
+altera_mf_ver:                               ./libraries/altera_mf_ver/                              
+altera_lnsim_ver:                            ./libraries/altera_lnsim_ver/                           
+twentynm_ver:                                ./libraries/twentynm_ver/                               
+twentynm_hssi_ver:                           ./libraries/twentynm_hssi_ver/                          
+twentynm_hip_ver:                            ./libraries/twentynm_hip_ver/                           
+altera:                                      ./libraries/altera/                                     
+lpm:                                         ./libraries/lpm/                                        
+sgate:                                       ./libraries/sgate/                                      
+altera_mf:                                   ./libraries/altera_mf/                                  
+altera_lnsim:                                ./libraries/altera_lnsim/                               
+twentynm:                                    ./libraries/twentynm/                                   
+twentynm_hssi:                               ./libraries/twentynm_hssi/                              
+twentynm_hip:                                ./libraries/twentynm_hip/                               

@@ -1,0 +1,535 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [0.385921, 0.27493, 0.140391, 0.110579, 0]
+  , "total":
+  [2349, 2399, 3, 0]
+  , "name":"System"
+  , "max_resources":
+  [854400, 1708800, 2713, 1518]
+  , "children":
+  [
+    {
+      "name":"count"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.385921, 0.27493, 0.140391, 0.110579, 0]
+      , "total_kernel_resources":
+      [2349, 2399, 3, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Component call"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 128 bits wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Component return"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 1 bit wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"count.B1.start"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [217, 492, 3, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"counter.cpp:13"
+                  , "type":"resource"
+                  , "data":
+                  [17, 89, 1, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":13
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:24"
+                  , "type":"resource"
+                  , "data":
+                  [20, 33, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":24
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:25"
+                  , "type":"resource"
+                  , "data":
+                  [37, 122, 1, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":25
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:26"
+                  , "type":"resource"
+                  , "data":
+                  [37, 122, 1, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":26
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:28"
+                  , "type":"resource"
+                  , "data":
+                  [53, 63, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":28
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:29"
+                  , "type":"resource"
+                  , "data":
+                  [53, 63, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":29
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [6, 4, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Channel Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0]
+                    }
+                    , {
+                      "name":"Iteration Initiation"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 2, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:13"
+                  , "type":"resource"
+                  , "data":
+                  [49, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":13
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [16, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:14"
+                  , "type":"resource"
+                  , "data":
+                  [265, 237, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":14
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [249, 221, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Local-pipelined LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [16, 16, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:15"
+                  , "type":"resource"
+                  , "data":
+                  [262, 221, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":15
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [249, 221, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Local-pipelined LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [13, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:25"
+                  , "type":"resource"
+                  , "data":
+                  [668, 459, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":25
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [132, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [498, 442, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Local-pipelined LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [16, 16, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [22, 1, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:26"
+                  , "type":"resource"
+                  , "data":
+                  [698, 442, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":26
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [132, 0, 0, 0]
+                    }
+                    , {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [498, 442, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Local-pipelined LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [13, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [22, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:28"
+                  , "type":"resource"
+                  , "data":
+                  [92, 272, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":28
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [92, 272, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Local-pipelined LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:29"
+                  , "type":"resource"
+                  , "data":
+                  [92, 272, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":29
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [92, 272, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Local-pipelined LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

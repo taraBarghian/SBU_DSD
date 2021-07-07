@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dd:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/verification
+vtb_count_10_gbu7t7a
+!s110 1624780301
+!i10b 1
+!s100 a5]^mzh]<gZ0LenTo[CWC0
+I0P7i;Ve^=?nbIQZ6ajz`Z2
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1624780216
+8tb/sim/../count_10/sim/tb_count_10_gbu7t7a.v
+Ftb/sim/../count_10/sim/tb_count_10_gbu7t7a.v
+L0 6
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1624780301.000000
+!s107 tb/sim/../count_10/sim/tb_count_10_gbu7t7a.v|
+!s90 tb/sim/../count_10/sim/tb_count_10_gbu7t7a.v|-work|tb_count_10|
+!i113 1
+o-work tb_count_10
+tCvgOpt 0

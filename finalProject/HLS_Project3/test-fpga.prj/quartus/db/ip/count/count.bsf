@@ -1,0 +1,171 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 304 336)
+	(text "count" (rect 137 -1 158 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 320 20 332)(font "Arial" ))
+	(port
+		(pt 304 120)
+		(input)
+		(text "avmm_0_rw_readdata[63..0]" (rect 0 0 118 12)(font "Arial" (font_size 8)))
+		(text "avmm_0_rw_readdata[63..0]" (rect 160 109 310 120)(font "Arial" (font_size 8)))
+		(line (pt 304 120)(pt 144 120)(line_width 3))
+	)
+	(port
+		(pt 0 72)
+		(input)
+		(text "start" (rect 0 0 17 12)(font "Arial" (font_size 8)))
+		(text "start" (rect 4 61 34 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 48 72)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "clock" (rect 0 0 20 12)(font "Arial" (font_size 8)))
+		(text "clock" (rect 4 117 34 128)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 48 128)(line_width 1))
+	)
+	(port
+		(pt 0 168)
+		(input)
+		(text "k[63..0]" (rect 0 0 29 12)(font "Arial" (font_size 8)))
+		(text "k[63..0]" (rect 4 157 52 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 48 168)(line_width 3))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "resetn" (rect 0 0 24 12)(font "Arial" (font_size 8)))
+		(text "resetn" (rect 4 197 40 208)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 48 208)(line_width 1))
+	)
+	(port
+		(pt 0 264)
+		(input)
+		(text "stall" (rect 0 0 14 12)(font "Arial" (font_size 8)))
+		(text "stall" (rect 4 253 34 264)(font "Arial" (font_size 8)))
+		(line (pt 0 264)(pt 48 264)(line_width 1))
+	)
+	(port
+		(pt 0 304)
+		(input)
+		(text "v[63..0]" (rect 0 0 30 12)(font "Arial" (font_size 8)))
+		(text "v[63..0]" (rect 4 293 52 304)(font "Arial" (font_size 8)))
+		(line (pt 0 304)(pt 48 304)(line_width 3))
+	)
+	(port
+		(pt 304 72)
+		(output)
+		(text "avmm_0_rw_address[63..0]" (rect 0 0 115 12)(font "Arial" (font_size 8)))
+		(text "avmm_0_rw_address[63..0]" (rect 163 61 307 72)(font "Arial" (font_size 8)))
+		(line (pt 304 72)(pt 144 72)(line_width 3))
+	)
+	(port
+		(pt 304 88)
+		(output)
+		(text "avmm_0_rw_byteenable[7..0]" (rect 0 0 121 12)(font "Arial" (font_size 8)))
+		(text "avmm_0_rw_byteenable[7..0]" (rect 156 77 312 88)(font "Arial" (font_size 8)))
+		(line (pt 304 88)(pt 144 88)(line_width 3))
+	)
+	(port
+		(pt 304 104)
+		(output)
+		(text "avmm_0_rw_read" (rect 0 0 76 12)(font "Arial" (font_size 8)))
+		(text "avmm_0_rw_read" (rect 211 93 295 104)(font "Arial" (font_size 8)))
+		(line (pt 304 104)(pt 144 104)(line_width 1))
+	)
+	(port
+		(pt 304 136)
+		(output)
+		(text "avmm_0_rw_write" (rect 0 0 76 12)(font "Arial" (font_size 8)))
+		(text "avmm_0_rw_write" (rect 208 125 298 136)(font "Arial" (font_size 8)))
+		(line (pt 304 136)(pt 144 136)(line_width 1))
+	)
+	(port
+		(pt 304 152)
+		(output)
+		(text "avmm_0_rw_writedata[63..0]" (rect 0 0 118 12)(font "Arial" (font_size 8)))
+		(text "avmm_0_rw_writedata[63..0]" (rect 157 141 313 152)(font "Arial" (font_size 8)))
+		(line (pt 304 152)(pt 144 152)(line_width 3))
+	)
+	(port
+		(pt 0 88)
+		(output)
+		(text "busy" (rect 0 0 20 12)(font "Arial" (font_size 8)))
+		(text "busy" (rect 4 77 28 88)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 48 88)(line_width 1))
+	)
+	(port
+		(pt 0 248)
+		(output)
+		(text "done" (rect 0 0 18 12)(font "Arial" (font_size 8)))
+		(text "done" (rect 4 237 28 248)(font "Arial" (font_size 8)))
+		(line (pt 0 248)(pt 48 248)(line_width 1))
+	)
+	(drawing
+		(text "avmm_0_rw" (rect 145 43 344 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "address" (rect 107 67 256 144)(font "Arial" (color 0 0 0)))
+		(text "byteenable" (rect 95 83 250 176)(font "Arial" (color 0 0 0)))
+		(text "read" (rect 122 99 268 208)(font "Arial" (color 0 0 0)))
+		(text "readdata" (rect 104 115 256 240)(font "Arial" (color 0 0 0)))
+		(text "write" (rect 121 131 272 272)(font "Arial" (color 0 0 0)))
+		(text "writedata" (rect 103 147 260 304)(font "Arial" (color 0 0 0)))
+		(text "call" (rect 30 43 84 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "valid" (rect 53 67 136 144)(font "Arial" (color 0 0 0)))
+		(text "stall" (rect 53 83 136 176)(font "Arial" (color 0 0 0)))
+		(text "clock" (rect 20 99 70 211)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 53 123 124 256)(font "Arial" (color 0 0 0)))
+		(text "k" (rect 42 139 90 291)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "data" (rect 53 163 130 336)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 19 179 68 371)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 53 203 148 416)(font "Arial" (color 0 0 0)))
+		(text "return" (rect 14 219 64 451)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "valid" (rect 53 243 136 496)(font "Arial" (color 0 0 0)))
+		(text "stall" (rect 53 259 136 528)(font "Arial" (color 0 0 0)))
+		(text "v" (rect 43 275 92 563)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "data" (rect 53 299 130 608)(font "Arial" (color 0 0 0)))
+		(text " count " (rect 278 320 598 650)(font "Arial" ))
+		(line (pt 48 32)(pt 144 32)(line_width 1))
+		(line (pt 144 32)(pt 144 320)(line_width 1))
+		(line (pt 48 320)(pt 144 320)(line_width 1))
+		(line (pt 48 32)(pt 48 320)(line_width 1))
+		(line (pt 143 52)(pt 143 156)(line_width 1))
+		(line (pt 142 52)(pt 142 156)(line_width 1))
+		(line (pt 49 52)(pt 49 92)(line_width 1))
+		(line (pt 50 52)(pt 50 92)(line_width 1))
+		(line (pt 49 108)(pt 49 132)(line_width 1))
+		(line (pt 50 108)(pt 50 132)(line_width 1))
+		(line (pt 49 148)(pt 49 172)(line_width 1))
+		(line (pt 50 148)(pt 50 172)(line_width 1))
+		(line (pt 49 188)(pt 49 212)(line_width 1))
+		(line (pt 50 188)(pt 50 212)(line_width 1))
+		(line (pt 49 228)(pt 49 268)(line_width 1))
+		(line (pt 50 228)(pt 50 268)(line_width 1))
+		(line (pt 49 284)(pt 49 308)(line_width 1))
+		(line (pt 50 284)(pt 50 308)(line_width 1))
+		(line (pt 0 0)(pt 304 0)(line_width 1))
+		(line (pt 304 0)(pt 304 336)(line_width 1))
+		(line (pt 0 336)(pt 304 336)(line_width 1))
+		(line (pt 0 0)(pt 0 336)(line_width 1))
+	)
+)

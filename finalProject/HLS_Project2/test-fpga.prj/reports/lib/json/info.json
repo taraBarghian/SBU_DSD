@@ -1,0 +1,8 @@
+{"name":"Info","rows":[
+{"name":"Project Name","data":["./test-fpga"],"classes":["info-table"]},
+{"name":"Target Family, Device","data":["Arria 10, 10AX115U1F45I1SG"]},
+{"name":"i++ Version","data":["19.1.0 Build 670"]},
+{"name":"Quartus Version","data":["19.1.0 Build 670"]},
+{"name":"Command","data":["i++ -march=Arria10 counter.cpp -o test-fpga.exe"]},
+{"name":"Reports Generated At", "data":["Sun Jun 27 12:19:15 2021"]}
+]}

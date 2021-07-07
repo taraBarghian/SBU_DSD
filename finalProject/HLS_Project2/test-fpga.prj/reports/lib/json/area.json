@@ -1,0 +1,1064 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [0.401032, 0.268258, 0.159235, 0, 0]
+  , "total":
+  [2292, 2721, 0, 0]
+  , "name":"System"
+  , "max_resources":
+  [854400, 1708800, 2713, 1518]
+  , "children":
+  [
+    {
+      "name":"count"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.401032, 0.268258, 0.159235, 0, 0]
+      , "total_kernel_resources":
+      [2292, 2721, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Component call"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 128 bits wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Component return"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 1 bit wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Variable: \n - 'sum' (counter.cpp:12)"
+          , "type":"resource"
+          , "data":
+          [24, 101, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"counter.cpp"
+                , "line":12
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 and depth 1"
+            }
+          ]
+        }
+        , {
+          "name":"Variable: \n - 'y' (counter.cpp:10)"
+          , "type":"resource"
+          , "data":
+          [7, 36, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"counter.cpp"
+                , "line":10
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 and depth 1"
+            }
+          ]
+        }
+        , {
+          "name":"Variable: \n - 'z' (counter.cpp:11)"
+          , "type":"resource"
+          , "data":
+          [7, 36, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"counter.cpp"
+                , "line":11
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 and depth 1"
+            }
+          ]
+        }
+        , {
+          "name":"count.B1.start"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [0, 320, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [0, 64, 0, 0]
+                }
+                , {
+                  "name":"counter.cpp:10"
+                  , "type":"resource"
+                  , "data":
+                  [0, 32, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":10
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:11"
+                  , "type":"resource"
+                  , "data":
+                  [0, 96, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":11
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:18"
+                  , "type":"resource"
+                  , "data":
+                  [0, 64, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":18
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:19"
+                  , "type":"resource"
+                  , "data":
+                  [0, 64, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [5, 2, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [5, 2, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [1, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:10"
+                  , "type":"resource"
+                  , "data":
+                  [249, 221, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":10
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [249, 221, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Local-pipelined LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:11"
+                  , "type":"resource"
+                  , "data":
+                  [249, 221, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":11
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [249, 221, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Local-pipelined LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:18"
+                  , "type":"resource"
+                  , "data":
+                  [498, 442, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":18
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [498, 442, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Local-pipelined LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:19"
+                  , "type":"resource"
+                  , "data":
+                  [498, 442, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [498, 442, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Local-pipelined LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"count.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [19, 99, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [19, 35, 0, 0]
+                }
+                , {
+                  "name":"counter.cpp:18"
+                  , "type":"resource"
+                  , "data":
+                  [0, 32, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":18
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:19"
+                  , "type":"resource"
+                  , "data":
+                  [0, 32, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [88, 218, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0]
+                }
+                , {
+                  "name":"counter.cpp:10"
+                  , "type":"resource"
+                  , "data":
+                  [0.5, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":10
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:11"
+                  , "type":"resource"
+                  , "data":
+                  [0.5, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":11
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:12"
+                  , "type":"resource"
+                  , "data":
+                  [0.5, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":12
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:15"
+                  , "type":"resource"
+                  , "data":
+                  [23, 22.5, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":15
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:17"
+                  , "type":"resource"
+                  , "data":
+                  [24.5, 101, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":17
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:18"
+                  , "type":"resource"
+                  , "data":
+                  [7.5, 36, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":18
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:19"
+                  , "type":"resource"
+                  , "data":
+                  [7.5, 36, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:20"
+                  , "type":"resource"
+                  , "data":
+                  [23, 22.5, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":20
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [44, 28, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"counter.cpp:10"
+                  , "type":"resource"
+                  , "data":
+                  [13, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":10
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [13, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:11"
+                  , "type":"resource"
+                  , "data":
+                  [13, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":11
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [13, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:15"
+                  , "type":"resource"
+                  , "data":
+                  [9.5, 0.5, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":15
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"6-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3.5, 0, 0, 0]
+                    }
+                    , {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [0.5, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [5.5, 0.5, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:17"
+                  , "type":"resource"
+                  , "data":
+                  [33, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":17
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:18"
+                  , "type":"resource"
+                  , "data":
+                  [167, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":18
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [132, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [13, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [22, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:19"
+                  , "type":"resource"
+                  , "data":
+                  [167, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [132, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [13, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [22, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:20"
+                  , "type":"resource"
+                  , "data":
+                  [9.5, 0.5, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":20
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"6-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3.5, 0, 0, 0]
+                    }
+                    , {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [0.5, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [5.5, 0.5, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"count.B3"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [3, 8, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [3, 8, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [3, 2, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"counter.cpp:21"
+                  , "type":"resource"
+                  , "data":
+                  [92, 272, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":21
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [92, 272, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Local-pipelined LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"counter.cpp:22"
+                  , "type":"resource"
+                  , "data":
+                  [92, 272, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"counter.cpp"
+                        , "line":22
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [92, 272, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Local-pipelined LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+package require -exact qsys 15.0
+set_module_property NAME count_internal
+set_module_property VERSION 1.0
+set_module_property INTERNAL true
+set_module_property GROUP HLS
+set_module_property DISPLAY_NAME count_internal
+set_module_property INSTANTIATE_IN_SYSTEM_MODULE true
+set_module_property EDITABLE true
+set_module_assignment hls.cosim.name {count}
+
+#### Synthesis fileset
+add_fileset QUARTUS_SYNTH QUARTUS_SYNTH "" ""
+set_fileset_property QUARTUS_SYNTH TOP_LEVEL count_internal
+set_fileset_property QUARTUS_SYNTH ENABLE_RELATIVE_INCLUDE_PATHS false
+add_fileset_file dspba_library_package.vhd VHDL PATH windows64/lib/dspba/Libraries/vhdl/base/dspba_library_package.vhd
+add_fileset_file dspba_library.vhd VHDL PATH windows64/lib/dspba/Libraries/vhdl/base/dspba_library.vhd
+add_fileset_file acl_data_fifo.v SYSTEM_VERILOG PATH ip/acl_data_fifo.v
+add_fileset_file acl_fifo.v SYSTEM_VERILOG PATH ip/acl_fifo.v
+add_fileset_file acl_ll_fifo.v SYSTEM_VERILOG PATH ip/acl_ll_fifo.v
+add_fileset_file acl_ll_ram_fifo.v SYSTEM_VERILOG PATH ip/acl_ll_ram_fifo.v
+add_fileset_file acl_valid_fifo_counter.v SYSTEM_VERILOG PATH ip/acl_valid_fifo_counter.v
+add_fileset_file acl_dspba_valid_fifo_counter.v SYSTEM_VERILOG PATH ip/acl_dspba_valid_fifo_counter.v
+add_fileset_file acl_staging_reg.v SYSTEM_VERILOG PATH ip/acl_staging_reg.v
+add_fileset_file hld_fifo.sv SYSTEM_VERILOG PATH ip/hld_fifo.sv
+add_fileset_file hld_fifo_zero_width.sv SYSTEM_VERILOG PATH ip/hld_fifo_zero_width.sv
+add_fileset_file acl_high_speed_fifo.sv SYSTEM_VERILOG PATH ip/acl_high_speed_fifo.sv
+add_fileset_file acl_low_latency_fifo.sv SYSTEM_VERILOG PATH ip/acl_low_latency_fifo.sv
+add_fileset_file acl_zero_latency_fifo.sv SYSTEM_VERILOG PATH ip/acl_zero_latency_fifo.sv
+add_fileset_file acl_fanout_pipeline.sv SYSTEM_VERILOG PATH ip/acl_fanout_pipeline.sv
+add_fileset_file acl_std_synchronizer_nocut.v SYSTEM_VERILOG PATH ip/acl_std_synchronizer_nocut.v
+add_fileset_file acl_tessellated_incr_decr_threshold.sv SYSTEM_VERILOG PATH ip/acl_tessellated_incr_decr_threshold.sv
+add_fileset_file acl_tessellated_incr_lookahead.sv SYSTEM_VERILOG PATH ip/acl_tessellated_incr_lookahead.sv
+add_fileset_file acl_reset_handler.sv SYSTEM_VERILOG PATH ip/acl_reset_handler.sv
+add_fileset_file acl_lfsr.sv SYSTEM_VERILOG PATH ip/acl_lfsr.sv
+add_fileset_file acl_pop.v SYSTEM_VERILOG PATH ip/acl_pop.v
+add_fileset_file acl_push.v SYSTEM_VERILOG PATH ip/acl_push.v
+add_fileset_file acl_token_fifo_counter.v SYSTEM_VERILOG PATH ip/acl_token_fifo_counter.v
+add_fileset_file acl_pipeline.v SYSTEM_VERILOG PATH ip/acl_pipeline.v
+add_fileset_file acl_dspba_buffer.v SYSTEM_VERILOG PATH ip/acl_dspba_buffer.v
+add_fileset_file st_top.v SYSTEM_VERILOG PATH ip/st_top.v
+add_fileset_file lsu_top.v SYSTEM_VERILOG PATH ip/lsu_top.v
+add_fileset_file lsu_permute_address.v SYSTEM_VERILOG PATH ip/lsu_permute_address.v
+add_fileset_file lsu_pipelined.v SYSTEM_VERILOG PATH ip/lsu_pipelined.v
+add_fileset_file lsu_enabled.v SYSTEM_VERILOG PATH ip/lsu_enabled.v
+add_fileset_file lsu_basic_coalescer.v SYSTEM_VERILOG PATH ip/lsu_basic_coalescer.v
+add_fileset_file lsu_simple.v SYSTEM_VERILOG PATH ip/lsu_simple.v
+add_fileset_file lsu_streaming.v SYSTEM_VERILOG PATH ip/lsu_streaming.v
+add_fileset_file lsu_burst_master.v SYSTEM_VERILOG PATH ip/lsu_burst_master.v
+add_fileset_file lsu_bursting_load_stores.v SYSTEM_VERILOG PATH ip/lsu_bursting_load_stores.v
+add_fileset_file lsu_non_aligned_write.v SYSTEM_VERILOG PATH ip/lsu_non_aligned_write.v
+add_fileset_file lsu_read_cache.v SYSTEM_VERILOG PATH ip/lsu_read_cache.v
+add_fileset_file lsu_atomic.v SYSTEM_VERILOG PATH ip/lsu_atomic.v
+add_fileset_file lsu_prefetch_block.v SYSTEM_VERILOG PATH ip/lsu_prefetch_block.v
+add_fileset_file lsu_wide_wrapper.v SYSTEM_VERILOG PATH ip/lsu_wide_wrapper.v
+add_fileset_file lsu_streaming_prefetch.v SYSTEM_VERILOG PATH ip/lsu_streaming_prefetch.v
+add_fileset_file acl_aligned_burst_coalesced_lsu.v SYSTEM_VERILOG PATH ip/acl_aligned_burst_coalesced_lsu.v
+add_fileset_file acl_toggle_detect.v SYSTEM_VERILOG PATH ip/acl_toggle_detect.v
+add_fileset_file acl_debug_mem.v SYSTEM_VERILOG PATH ip/acl_debug_mem.v
+add_fileset_file lsu_burst_coalesced_pipelined_write.sv SYSTEM_VERILOG PATH ip/lsu_burst_coalesced_pipelined_write.sv
+add_fileset_file lsu_burst_coalesced_pipelined_read.sv SYSTEM_VERILOG PATH ip/lsu_burst_coalesced_pipelined_read.sv
+add_fileset_file acl_fifo_stall_valid_lookahead.sv SYSTEM_VERILOG PATH ip/acl_fifo_stall_valid_lookahead.sv
+add_fileset_file acl_reset_wire.v SYSTEM_VERILOG PATH ip/acl_reset_wire.v
+add_fileset_file count_function_wrapper.vhd VHDL PATH ip/count_function_wrapper.vhd
+add_fileset_file count_function.vhd VHDL PATH ip/count_function.vhd
+add_fileset_file bb_count_B1_start_sr_1.vhd VHDL PATH ip/bb_count_B1_start_sr_1.vhd
+add_fileset_file bb_count_B0_runOnce.vhd VHDL PATH ip/bb_count_B0_runOnce.vhd
+add_fileset_file bb_count_B0_runOnce_stall_region.vhd VHDL PATH ip/bb_count_B0_runOnce_stall_region.vhd
+add_fileset_file count_B0_runOnce_merge_reg.vhd VHDL PATH ip/count_B0_runOnce_merge_reg.vhd
+add_fileset_file i_acl_pop_i1_wt_limpop_count0.vhd VHDL PATH ip/i_acl_pop_i1_wt_limpop_count0.vhd
+add_fileset_file i_acl_pop_i1_wt_limpop_count_reg.vhd VHDL PATH ip/i_acl_pop_i1_wt_limpop_count_reg.vhd
+add_fileset_file i_acl_push_i1_wt_limpush_count2.vhd VHDL PATH ip/i_acl_push_i1_wt_limpush_count2.vhd
+add_fileset_file i_acl_push_i1_wt_limpush_count_reg.vhd VHDL PATH ip/i_acl_push_i1_wt_limpush_count_reg.vhd
+add_fileset_file count_B0_runOnce_branch.vhd VHDL PATH ip/count_B0_runOnce_branch.vhd
+add_fileset_file count_B0_runOnce_merge.vhd VHDL PATH ip/count_B0_runOnce_merge.vhd
+add_fileset_file bb_count_B1_start.vhd VHDL PATH ip/bb_count_B1_start.vhd
+add_fileset_file bb_count_B1_start_stall_region.vhd VHDL PATH ip/bb_count_B1_start_stall_region.vhd
+add_fileset_file count_B1_start_merge_reg.vhd VHDL PATH ip/count_B1_start_merge_reg.vhd
+add_fileset_file i_iord_bl_do_unnamed_count0_count8.vhd VHDL PATH ip/i_iord_bl_do_unnamed_count0_count8.vhd
+add_fileset_file i_acl_pipeline_keep_going_count4.vhd VHDL PATH ip/i_acl_pipeline_keep_going_count4.vhd
+add_fileset_file i_acl_pipeline_keep_going_count_reg.vhd VHDL PATH ip/i_acl_pipeline_keep_going_count_reg.vhd
+add_fileset_file i_acl_pop_i1_memdep_phi3_pop7_count16.vhd VHDL PATH ip/i_acl_pop_i1_memdep_phi3_pop7_count16.vhd
+add_fileset_file i_acl_pop_i1_memdep_phi3_pop7_count_reg.vhd VHDL PATH ip/i_acl_pop_i1_memdep_phi3_pop7_count_reg.vhd
+add_fileset_file i_acl_pop_i1_memdep_phi_pop6_count12.vhd VHDL PATH ip/i_acl_pop_i1_memdep_phi_pop6_count12.vhd
+add_fileset_file i_acl_pop_i1_memdep_phi_pop6_count_reg.vhd VHDL PATH ip/i_acl_pop_i1_memdep_phi_pop6_count_reg.vhd
+add_fileset_file i_acl_pop_i32_sum_count_4ia_addr_0_pop5_count10.vhd VHDL PATH ip/i_acl_pop_i32_sum_count_4ia_addr_0_pop5_count10.vhd
+add_fileset_file i_acl_pop_i32_sum_count_4ia_addr_0_pop5_count_reg.vhd VHDL PATH ip/i_acl_pop_i32_sum_count_4ia_addr_0_pop5_count_reg.vhd
+add_fileset_file i_acl_pop_i32_y_count_4ia_addr_0_pop4_count20.vhd VHDL PATH ip/i_acl_pop_i32_y_count_4ia_addr_0_pop4_count20.vhd
+add_fileset_file i_acl_pop_i32_y_count_4ia_addr_0_pop4_count_reg.vhd VHDL PATH ip/i_acl_pop_i32_y_count_4ia_addr_0_pop4_count_reg.vhd
+add_fileset_file i_acl_pop_i32_z_count_4ia_addr_0_pop3_count22.vhd VHDL PATH ip/i_acl_pop_i32_z_count_4ia_addr_0_pop3_count22.vhd
+add_fileset_file i_acl_pop_i32_z_count_4ia_addr_0_pop3_count_reg.vhd VHDL PATH ip/i_acl_pop_i32_z_count_4ia_addr_0_pop3_count_reg.vhd
+add_fileset_file i_acl_push_i1_memdep_phi3_push7_count55.vhd VHDL PATH ip/i_acl_push_i1_memdep_phi3_push7_count55.vhd
+add_fileset_file i_acl_push_i1_memdep_phi3_push7_count_reg.vhd VHDL PATH ip/i_acl_push_i1_memdep_phi3_push7_count_reg.vhd
+add_fileset_file i_acl_push_i1_memdep_phi_push6_count51.vhd VHDL PATH ip/i_acl_push_i1_memdep_phi_push6_count51.vhd
+add_fileset_file i_acl_push_i1_memdep_phi_push6_count_reg.vhd VHDL PATH ip/i_acl_push_i1_memdep_phi_push6_count_reg.vhd
+add_fileset_file i_acl_push_i1_notexitcond_count6.vhd VHDL PATH ip/i_acl_push_i1_notexitcond_count6.vhd
+add_fileset_file i_acl_push_i1_notexitcond_count_reg.vhd VHDL PATH ip/i_acl_push_i1_notexitcond_count_reg.vhd
+add_fileset_file i_acl_push_i32_sum_count_4ia_addr_0_push5_count24.vhd VHDL PATH ip/i_acl_push_i32_sum_count_4ia_addr_0_push5_count24.vhd
+add_fileset_file i_acl_push_i32_sum_count_4ia_addr_0_push5_count_reg.vhd VHDL PATH ip/i_acl_push_i32_sum_count_4ia_addr_0_push5_count_reg.vhd
+add_fileset_file i_acl_push_i32_y_count_4ia_addr_0_push4_count33.vhd VHDL PATH ip/i_acl_push_i32_y_count_4ia_addr_0_push4_count33.vhd
+add_fileset_file i_acl_push_i32_y_count_4ia_addr_0_push4_count_reg.vhd VHDL PATH ip/i_acl_push_i32_y_count_4ia_addr_0_push4_count_reg.vhd
+add_fileset_file i_acl_push_i32_z_count_4ia_addr_0_push3_count43.vhd VHDL PATH ip/i_acl_push_i32_z_count_4ia_addr_0_push3_count43.vhd
+add_fileset_file i_acl_push_i32_z_count_4ia_addr_0_push3_count_reg.vhd VHDL PATH ip/i_acl_push_i32_z_count_4ia_addr_0_push3_count_reg.vhd
+add_fileset_file i_iowr_bl_return_unnamed_count7_count57.vhd VHDL PATH ip/i_iowr_bl_return_unnamed_count7_count57.vhd
+add_fileset_file i_load_unnamed_count1_count14.vhd VHDL PATH ip/i_load_unnamed_count1_count14.vhd
+add_fileset_file readdata_reg_unnamed_count1_count0.vhd VHDL PATH ip/readdata_reg_unnamed_count1_count0.vhd
+add_fileset_file i_load_unnamed_count2_count18.vhd VHDL PATH ip/i_load_unnamed_count2_count18.vhd
+add_fileset_file readdata_reg_unnamed_count2_count1.vhd VHDL PATH ip/readdata_reg_unnamed_count2_count1.vhd
+add_fileset_file i_load_unnamed_count3_count27.vhd VHDL PATH ip/i_load_unnamed_count3_count27.vhd
+add_fileset_file readdata_reg_unnamed_count3_count2.vhd VHDL PATH ip/readdata_reg_unnamed_count3_count2.vhd
+add_fileset_file i_load_unnamed_count4_count31.vhd VHDL PATH ip/i_load_unnamed_count4_count31.vhd
+add_fileset_file readdata_reg_unnamed_count4_count3.vhd VHDL PATH ip/readdata_reg_unnamed_count4_count3.vhd
+add_fileset_file i_load_unnamed_count5_count37.vhd VHDL PATH ip/i_load_unnamed_count5_count37.vhd
+add_fileset_file readdata_reg_unnamed_count5_count4.vhd VHDL PATH ip/readdata_reg_unnamed_count5_count4.vhd
+add_fileset_file i_load_unnamed_count6_count41.vhd VHDL PATH ip/i_load_unnamed_count6_count41.vhd
+add_fileset_file readdata_reg_unnamed_count6_count5.vhd VHDL PATH ip/readdata_reg_unnamed_count6_count5.vhd
+add_fileset_file i_store_memdep_2_count53.vhd VHDL PATH ip/i_store_memdep_2_count53.vhd
+add_fileset_file i_store_memdep_count49.vhd VHDL PATH ip/i_store_memdep_count49.vhd
+add_fileset_file count_B1_start_branch.vhd VHDL PATH ip/count_B1_start_branch.vhd
+add_fileset_file count_B1_start_merge.vhd VHDL PATH ip/count_B1_start_merge.vhd
+add_fileset_file i_acl_pipeline_keep_going_count_sr.vhd VHDL PATH ip/i_acl_pipeline_keep_going_count_sr.vhd
+add_fileset_file acl_avm_to_ic.v SYSTEM_VERILOG PATH ip/acl_avm_to_ic.v
+add_fileset_file acl_ic_master_endpoint.v SYSTEM_VERILOG PATH ip/acl_ic_master_endpoint.v
+add_fileset_file acl_arb_intf.v SYSTEM_VERILOG PATH ip/acl_arb_intf.v
+add_fileset_file acl_ic_intf.v SYSTEM_VERILOG PATH ip/acl_ic_intf.v
+add_fileset_file acl_ic_slave_endpoint.v SYSTEM_VERILOG PATH ip/acl_ic_slave_endpoint.v
+add_fileset_file acl_ic_slave_rrp.v SYSTEM_VERILOG PATH ip/acl_ic_slave_rrp.v
+add_fileset_file acl_ic_slave_wrp.v SYSTEM_VERILOG PATH ip/acl_ic_slave_wrp.v
+add_fileset_file acl_arb2.v SYSTEM_VERILOG PATH ip/acl_arb2.v
+add_fileset_file acl_ic_to_avm.v SYSTEM_VERILOG PATH ip/acl_ic_to_avm.v
+add_fileset_file count_internal.v SYSTEM_VERILOG PATH count_internal.v
+
+#### Simulation fileset
+add_fileset SIM_VERILOG SIM_VERILOG "" ""
+set_fileset_property SIM_VERILOG TOP_LEVEL count_internal
+set_fileset_property SIM_VERILOG ENABLE_RELATIVE_INCLUDE_PATHS false
+add_fileset_file dspba_library_package.vhd VHDL PATH windows64/lib/dspba/Libraries/vhdl/base/dspba_library_package.vhd
+add_fileset_file dspba_library.vhd VHDL PATH windows64/lib/dspba/Libraries/vhdl/base/dspba_library.vhd
+add_fileset_file acl_data_fifo.v SYSTEM_VERILOG PATH ip/acl_data_fifo.v
+add_fileset_file acl_fifo.v SYSTEM_VERILOG PATH ip/acl_fifo.v
+add_fileset_file acl_ll_fifo.v SYSTEM_VERILOG PATH ip/acl_ll_fifo.v
+add_fileset_file acl_ll_ram_fifo.v SYSTEM_VERILOG PATH ip/acl_ll_ram_fifo.v
+add_fileset_file acl_valid_fifo_counter.v SYSTEM_VERILOG PATH ip/acl_valid_fifo_counter.v
+add_fileset_file acl_dspba_valid_fifo_counter.v SYSTEM_VERILOG PATH ip/acl_dspba_valid_fifo_counter.v
+add_fileset_file acl_staging_reg.v SYSTEM_VERILOG PATH ip/acl_staging_reg.v
+add_fileset_file hld_fifo.sv SYSTEM_VERILOG PATH ip/hld_fifo.sv
+add_fileset_file hld_fifo_zero_width.sv SYSTEM_VERILOG PATH ip/hld_fifo_zero_width.sv
+add_fileset_file acl_high_speed_fifo.sv SYSTEM_VERILOG PATH ip/acl_high_speed_fifo.sv
+add_fileset_file acl_low_latency_fifo.sv SYSTEM_VERILOG PATH ip/acl_low_latency_fifo.sv
+add_fileset_file acl_zero_latency_fifo.sv SYSTEM_VERILOG PATH ip/acl_zero_latency_fifo.sv
+add_fileset_file acl_fanout_pipeline.sv SYSTEM_VERILOG PATH ip/acl_fanout_pipeline.sv
+add_fileset_file acl_std_synchronizer_nocut.v SYSTEM_VERILOG PATH ip/acl_std_synchronizer_nocut.v
+add_fileset_file acl_tessellated_incr_decr_threshold.sv SYSTEM_VERILOG PATH ip/acl_tessellated_incr_decr_threshold.sv
+add_fileset_file acl_tessellated_incr_lookahead.sv SYSTEM_VERILOG PATH ip/acl_tessellated_incr_lookahead.sv
+add_fileset_file acl_reset_handler.sv SYSTEM_VERILOG PATH ip/acl_reset_handler.sv
+add_fileset_file acl_lfsr.sv SYSTEM_VERILOG PATH ip/acl_lfsr.sv
+add_fileset_file acl_pop.v SYSTEM_VERILOG PATH ip/acl_pop.v
+add_fileset_file acl_push.v SYSTEM_VERILOG PATH ip/acl_push.v
+add_fileset_file acl_token_fifo_counter.v SYSTEM_VERILOG PATH ip/acl_token_fifo_counter.v
+add_fileset_file acl_pipeline.v SYSTEM_VERILOG PATH ip/acl_pipeline.v
+add_fileset_file acl_dspba_buffer.v SYSTEM_VERILOG PATH ip/acl_dspba_buffer.v
+add_fileset_file st_top.v SYSTEM_VERILOG PATH ip/st_top.v
+add_fileset_file lsu_top.v SYSTEM_VERILOG PATH ip/lsu_top.v
+add_fileset_file lsu_permute_address.v SYSTEM_VERILOG PATH ip/lsu_permute_address.v
+add_fileset_file lsu_pipelined.v SYSTEM_VERILOG PATH ip/lsu_pipelined.v
+add_fileset_file lsu_enabled.v SYSTEM_VERILOG PATH ip/lsu_enabled.v
+add_fileset_file lsu_basic_coalescer.v SYSTEM_VERILOG PATH ip/lsu_basic_coalescer.v
+add_fileset_file lsu_simple.v SYSTEM_VERILOG PATH ip/lsu_simple.v
+add_fileset_file lsu_streaming.v SYSTEM_VERILOG PATH ip/lsu_streaming.v
+add_fileset_file lsu_burst_master.v SYSTEM_VERILOG PATH ip/lsu_burst_master.v
+add_fileset_file lsu_bursting_load_stores.v SYSTEM_VERILOG PATH ip/lsu_bursting_load_stores.v
+add_fileset_file lsu_non_aligned_write.v SYSTEM_VERILOG PATH ip/lsu_non_aligned_write.v
+add_fileset_file lsu_read_cache.v SYSTEM_VERILOG PATH ip/lsu_read_cache.v
+add_fileset_file lsu_atomic.v SYSTEM_VERILOG PATH ip/lsu_atomic.v
+add_fileset_file lsu_prefetch_block.v SYSTEM_VERILOG PATH ip/lsu_prefetch_block.v
+add_fileset_file lsu_wide_wrapper.v SYSTEM_VERILOG PATH ip/lsu_wide_wrapper.v
+add_fileset_file lsu_streaming_prefetch.v SYSTEM_VERILOG PATH ip/lsu_streaming_prefetch.v
+add_fileset_file acl_aligned_burst_coalesced_lsu.v SYSTEM_VERILOG PATH ip/acl_aligned_burst_coalesced_lsu.v
+add_fileset_file acl_toggle_detect.v SYSTEM_VERILOG PATH ip/acl_toggle_detect.v
+add_fileset_file acl_debug_mem.v SYSTEM_VERILOG PATH ip/acl_debug_mem.v
+add_fileset_file lsu_burst_coalesced_pipelined_write.sv SYSTEM_VERILOG PATH ip/lsu_burst_coalesced_pipelined_write.sv
+add_fileset_file lsu_burst_coalesced_pipelined_read.sv SYSTEM_VERILOG PATH ip/lsu_burst_coalesced_pipelined_read.sv
+add_fileset_file acl_fifo_stall_valid_lookahead.sv SYSTEM_VERILOG PATH ip/acl_fifo_stall_valid_lookahead.sv
+add_fileset_file acl_reset_wire.v SYSTEM_VERILOG PATH ip/acl_reset_wire.v
+add_fileset_file count_function_wrapper.vhd VHDL PATH ip/count_function_wrapper.vhd
+add_fileset_file count_function.vhd VHDL PATH ip/count_function.vhd
+add_fileset_file bb_count_B1_start_sr_1.vhd VHDL PATH ip/bb_count_B1_start_sr_1.vhd
+add_fileset_file bb_count_B0_runOnce.vhd VHDL PATH ip/bb_count_B0_runOnce.vhd
+add_fileset_file bb_count_B0_runOnce_stall_region.vhd VHDL PATH ip/bb_count_B0_runOnce_stall_region.vhd
+add_fileset_file count_B0_runOnce_merge_reg.vhd VHDL PATH ip/count_B0_runOnce_merge_reg.vhd
+add_fileset_file i_acl_pop_i1_wt_limpop_count0.vhd VHDL PATH ip/i_acl_pop_i1_wt_limpop_count0.vhd
+add_fileset_file i_acl_pop_i1_wt_limpop_count_reg.vhd VHDL PATH ip/i_acl_pop_i1_wt_limpop_count_reg.vhd
+add_fileset_file i_acl_push_i1_wt_limpush_count2.vhd VHDL PATH ip/i_acl_push_i1_wt_limpush_count2.vhd
+add_fileset_file i_acl_push_i1_wt_limpush_count_reg.vhd VHDL PATH ip/i_acl_push_i1_wt_limpush_count_reg.vhd
+add_fileset_file count_B0_runOnce_branch.vhd VHDL PATH ip/count_B0_runOnce_branch.vhd
+add_fileset_file count_B0_runOnce_merge.vhd VHDL PATH ip/count_B0_runOnce_merge.vhd
+add_fileset_file bb_count_B1_start.vhd VHDL PATH ip/bb_count_B1_start.vhd
+add_fileset_file bb_count_B1_start_stall_region.vhd VHDL PATH ip/bb_count_B1_start_stall_region.vhd
+add_fileset_file count_B1_start_merge_reg.vhd VHDL PATH ip/count_B1_start_merge_reg.vhd
+add_fileset_file i_iord_bl_do_unnamed_count0_count8.vhd VHDL PATH ip/i_iord_bl_do_unnamed_count0_count8.vhd
+add_fileset_file i_acl_pipeline_keep_going_count4.vhd VHDL PATH ip/i_acl_pipeline_keep_going_count4.vhd
+add_fileset_file i_acl_pipeline_keep_going_count_reg.vhd VHDL PATH ip/i_acl_pipeline_keep_going_count_reg.vhd
+add_fileset_file i_acl_pop_i1_memdep_phi3_pop7_count16.vhd VHDL PATH ip/i_acl_pop_i1_memdep_phi3_pop7_count16.vhd
+add_fileset_file i_acl_pop_i1_memdep_phi3_pop7_count_reg.vhd VHDL PATH ip/i_acl_pop_i1_memdep_phi3_pop7_count_reg.vhd
+add_fileset_file i_acl_pop_i1_memdep_phi_pop6_count12.vhd VHDL PATH ip/i_acl_pop_i1_memdep_phi_pop6_count12.vhd
+add_fileset_file i_acl_pop_i1_memdep_phi_pop6_count_reg.vhd VHDL PATH ip/i_acl_pop_i1_memdep_phi_pop6_count_reg.vhd
+add_fileset_file i_acl_pop_i32_sum_count_4ia_addr_0_pop5_count10.vhd VHDL PATH ip/i_acl_pop_i32_sum_count_4ia_addr_0_pop5_count10.vhd
+add_fileset_file i_acl_pop_i32_sum_count_4ia_addr_0_pop5_count_reg.vhd VHDL PATH ip/i_acl_pop_i32_sum_count_4ia_addr_0_pop5_count_reg.vhd
+add_fileset_file i_acl_pop_i32_y_count_4ia_addr_0_pop4_count20.vhd VHDL PATH ip/i_acl_pop_i32_y_count_4ia_addr_0_pop4_count20.vhd
+add_fileset_file i_acl_pop_i32_y_count_4ia_addr_0_pop4_count_reg.vhd VHDL PATH ip/i_acl_pop_i32_y_count_4ia_addr_0_pop4_count_reg.vhd
+add_fileset_file i_acl_pop_i32_z_count_4ia_addr_0_pop3_count22.vhd VHDL PATH ip/i_acl_pop_i32_z_count_4ia_addr_0_pop3_count22.vhd
+add_fileset_file i_acl_pop_i32_z_count_4ia_addr_0_pop3_count_reg.vhd VHDL PATH ip/i_acl_pop_i32_z_count_4ia_addr_0_pop3_count_reg.vhd
+add_fileset_file i_acl_push_i1_memdep_phi3_push7_count55.vhd VHDL PATH ip/i_acl_push_i1_memdep_phi3_push7_count55.vhd
+add_fileset_file i_acl_push_i1_memdep_phi3_push7_count_reg.vhd VHDL PATH ip/i_acl_push_i1_memdep_phi3_push7_count_reg.vhd
+add_fileset_file i_acl_push_i1_memdep_phi_push6_count51.vhd VHDL PATH ip/i_acl_push_i1_memdep_phi_push6_count51.vhd
+add_fileset_file i_acl_push_i1_memdep_phi_push6_count_reg.vhd VHDL PATH ip/i_acl_push_i1_memdep_phi_push6_count_reg.vhd
+add_fileset_file i_acl_push_i1_notexitcond_count6.vhd VHDL PATH ip/i_acl_push_i1_notexitcond_count6.vhd
+add_fileset_file i_acl_push_i1_notexitcond_count_reg.vhd VHDL PATH ip/i_acl_push_i1_notexitcond_count_reg.vhd
+add_fileset_file i_acl_push_i32_sum_count_4ia_addr_0_push5_count24.vhd VHDL PATH ip/i_acl_push_i32_sum_count_4ia_addr_0_push5_count24.vhd
+add_fileset_file i_acl_push_i32_sum_count_4ia_addr_0_push5_count_reg.vhd VHDL PATH ip/i_acl_push_i32_sum_count_4ia_addr_0_push5_count_reg.vhd
+add_fileset_file i_acl_push_i32_y_count_4ia_addr_0_push4_count33.vhd VHDL PATH ip/i_acl_push_i32_y_count_4ia_addr_0_push4_count33.vhd
+add_fileset_file i_acl_push_i32_y_count_4ia_addr_0_push4_count_reg.vhd VHDL PATH ip/i_acl_push_i32_y_count_4ia_addr_0_push4_count_reg.vhd
+add_fileset_file i_acl_push_i32_z_count_4ia_addr_0_push3_count43.vhd VHDL PATH ip/i_acl_push_i32_z_count_4ia_addr_0_push3_count43.vhd
+add_fileset_file i_acl_push_i32_z_count_4ia_addr_0_push3_count_reg.vhd VHDL PATH ip/i_acl_push_i32_z_count_4ia_addr_0_push3_count_reg.vhd
+add_fileset_file i_iowr_bl_return_unnamed_count7_count57.vhd VHDL PATH ip/i_iowr_bl_return_unnamed_count7_count57.vhd
+add_fileset_file i_load_unnamed_count1_count14.vhd VHDL PATH ip/i_load_unnamed_count1_count14.vhd
+add_fileset_file readdata_reg_unnamed_count1_count0.vhd VHDL PATH ip/readdata_reg_unnamed_count1_count0.vhd
+add_fileset_file i_load_unnamed_count2_count18.vhd VHDL PATH ip/i_load_unnamed_count2_count18.vhd
+add_fileset_file readdata_reg_unnamed_count2_count1.vhd VHDL PATH ip/readdata_reg_unnamed_count2_count1.vhd
+add_fileset_file i_load_unnamed_count3_count27.vhd VHDL PATH ip/i_load_unnamed_count3_count27.vhd
+add_fileset_file readdata_reg_unnamed_count3_count2.vhd VHDL PATH ip/readdata_reg_unnamed_count3_count2.vhd
+add_fileset_file i_load_unnamed_count4_count31.vhd VHDL PATH ip/i_load_unnamed_count4_count31.vhd
+add_fileset_file readdata_reg_unnamed_count4_count3.vhd VHDL PATH ip/readdata_reg_unnamed_count4_count3.vhd
+add_fileset_file i_load_unnamed_count5_count37.vhd VHDL PATH ip/i_load_unnamed_count5_count37.vhd
+add_fileset_file readdata_reg_unnamed_count5_count4.vhd VHDL PATH ip/readdata_reg_unnamed_count5_count4.vhd
+add_fileset_file i_load_unnamed_count6_count41.vhd VHDL PATH ip/i_load_unnamed_count6_count41.vhd
+add_fileset_file readdata_reg_unnamed_count6_count5.vhd VHDL PATH ip/readdata_reg_unnamed_count6_count5.vhd
+add_fileset_file i_store_memdep_2_count53.vhd VHDL PATH ip/i_store_memdep_2_count53.vhd
+add_fileset_file i_store_memdep_count49.vhd VHDL PATH ip/i_store_memdep_count49.vhd
+add_fileset_file count_B1_start_branch.vhd VHDL PATH ip/count_B1_start_branch.vhd
+add_fileset_file count_B1_start_merge.vhd VHDL PATH ip/count_B1_start_merge.vhd
+add_fileset_file i_acl_pipeline_keep_going_count_sr.vhd VHDL PATH ip/i_acl_pipeline_keep_going_count_sr.vhd
+add_fileset_file acl_avm_to_ic.v SYSTEM_VERILOG PATH ip/acl_avm_to_ic.v
+add_fileset_file acl_ic_master_endpoint.v SYSTEM_VERILOG PATH ip/acl_ic_master_endpoint.v
+add_fileset_file acl_arb_intf.v SYSTEM_VERILOG PATH ip/acl_arb_intf.v
+add_fileset_file acl_ic_intf.v SYSTEM_VERILOG PATH ip/acl_ic_intf.v
+add_fileset_file acl_ic_slave_endpoint.v SYSTEM_VERILOG PATH ip/acl_ic_slave_endpoint.v
+add_fileset_file acl_ic_slave_rrp.v SYSTEM_VERILOG PATH ip/acl_ic_slave_rrp.v
+add_fileset_file acl_ic_slave_wrp.v SYSTEM_VERILOG PATH ip/acl_ic_slave_wrp.v
+add_fileset_file acl_arb2.v SYSTEM_VERILOG PATH ip/acl_arb2.v
+add_fileset_file acl_ic_to_avm.v SYSTEM_VERILOG PATH ip/acl_ic_to_avm.v
+add_fileset_file count_internal.v SYSTEM_VERILOG PATH count_internal.v
+
+#### Primary clock for the component
+add_interface clock clock end
+set_interface_property clock ENABLED true
+set_interface_assignment clock hls.cosim.name {$clock}
+add_interface_port clock clock clk input 1
+
+#### Primary reset for the component
+add_interface reset reset end
+set_interface_property reset associatedClock clock
+set_interface_assignment reset hls.cosim.name {$reset}
+add_interface_port reset resetn reset_n input 1
+
+#### The component invocation protocol interface (call)
+add_interface call conduit sink
+set_interface_property call associatedClock clock
+set_interface_property call associatedReset reset
+set_interface_assignment call hls.cosim.name {$call}
+add_interface_port call start valid input 1
+add_interface_port call busy stall output 1
+
+#### The component return protocol interface (return)
+add_interface return conduit source
+set_interface_property return associatedClock clock
+set_interface_property return associatedReset reset
+set_interface_assignment return hls.cosim.name {$return}
+add_interface_port return done valid output 1
+add_interface_port return stall stall input 1
+
+#### Parameter v interface
+add_interface v conduit sink
+set_interface_property v associatedClock clock
+set_interface_property v associatedReset reset
+set_interface_assignment v hls.cosim.name {v}
+add_interface_port v v data input 64
+
+#### Parameter k interface
+add_interface k conduit sink
+set_interface_property k associatedClock clock
+set_interface_property k associatedReset reset
+set_interface_assignment k hls.cosim.name {k}
+add_interface_port k k data input 64
+
+#### Master interface avmm_0_rw with base address 0
+add_interface avmm_0_rw avalon start
+set_interface_property avmm_0_rw ENABLED true
+set_interface_property avmm_0_rw associatedClock clock
+set_interface_property avmm_0_rw burstOnBurstBoundariesOnly false
+set_interface_property avmm_0_rw doStreamReads false
+set_interface_property avmm_0_rw doStreamWrites false
+set_interface_property avmm_0_rw linewrapBursts false
+set_interface_property avmm_0_rw readWaitTime 0
+set_interface_property avmm_0_rw readLatency 1
+add_interface_port avmm_0_rw avmm_0_rw_address address output 64
+add_interface_port avmm_0_rw avmm_0_rw_byteenable byteenable output 8
+add_interface_port avmm_0_rw avmm_0_rw_read read output 1
+add_interface_port avmm_0_rw avmm_0_rw_readdata readdata input 64
+add_interface_port avmm_0_rw avmm_0_rw_write write output 1
+add_interface_port avmm_0_rw avmm_0_rw_writedata writedata output 64
+
+#### Quartus settings (QIP strings)
+set_qip_strings { "set_instance_assignment -entity \"%entityName%\" -library \"%libraryName%\" -name AUTO_SHIFT_REGISTER_RECOGNITION OFF -to *_NO_SHIFT_REG*"  }

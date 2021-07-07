@@ -1,0 +1,116 @@
+Info: Starting: Create simulation model
+Info: qsys-generate D:\intelFPGA\19.1\hls\examples\Proj\test-fpga.prj\verification\tb.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=D:\intelFPGA\19.1\hls\examples\Proj\test-fpga.prj\verification\tb --family="Arria 10" --part=10AX115U1F45I1SG
+Progress: Loading verification/tb.qsys
+Progress: Reading input file
+Progress: Adding clock_reset_inst [hls_sim_clock_reset 1.0]
+Progress: Parameterizing module clock_reset_inst
+Progress: Adding component_dpi_controller_count_inst [hls_sim_component_dpi_controller 1.0]
+Progress: Parameterizing module component_dpi_controller_count_inst
+Progress: Adding concatenate_component_done_inst [avalon_concatenate_singlebit_conduits 1.0]
+Progress: Parameterizing module concatenate_component_done_inst
+Progress: Adding concatenate_component_wait_for_stream_writes_inst [avalon_concatenate_singlebit_conduits 1.0]
+Progress: Parameterizing module concatenate_component_wait_for_stream_writes_inst
+Progress: Adding count_component_dpi_controller_bind_conduit_fanout_inst [avalon_conduit_fanout 1.0]
+Progress: Parameterizing module count_component_dpi_controller_bind_conduit_fanout_inst
+Progress: Adding count_component_dpi_controller_enable_conduit_fanout_inst [avalon_conduit_fanout 1.0]
+Progress: Parameterizing module count_component_dpi_controller_enable_conduit_fanout_inst
+Progress: Adding count_component_dpi_controller_implicit_ready_conduit_fanout_inst [avalon_conduit_fanout 1.0]
+Progress: Parameterizing module count_component_dpi_controller_implicit_ready_conduit_fanout_inst
+Progress: Adding count_inst [count 1.0]
+Progress: Parameterizing module count_inst
+Progress: Adding main_dpi_controller_inst [hls_sim_main_dpi_controller 1.0]
+Progress: Parameterizing module main_dpi_controller_inst
+Progress: Adding mm_slave_dpi_bfm_count_avmm_0_rw_inst [hls_sim_mm_slave_dpi_bfm 1.0]
+Progress: Parameterizing module mm_slave_dpi_bfm_count_avmm_0_rw_inst
+Progress: Adding split_component_start_inst [avalon_split_multibit_conduit 1.0]
+Progress: Parameterizing module split_component_start_inst
+Progress: Adding stream_source_dpi_bfm_count_k_inst [hls_sim_stream_source_dpi_bfm 1.0]
+Progress: Parameterizing module stream_source_dpi_bfm_count_k_inst
+Progress: Adding stream_source_dpi_bfm_count_v_inst [hls_sim_stream_source_dpi_bfm 1.0]
+Progress: Parameterizing module stream_source_dpi_bfm_count_v_inst
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: tb.component_dpi_controller_count_inst.dpi_control_slaves_ready: Interface has no signals
+Warning: tb.component_dpi_controller_count_inst.dpi_control_slaves_done: Interface has no signals
+Warning: tb.component_dpi_controller_count_inst.dpi_control_stream_writes_active: Interface has no signals
+Warning: tb.component_dpi_controller_count_inst: component_dpi_controller_count_inst.dpi_control_slaves_ready must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_count_inst: component_dpi_controller_count_inst.dpi_control_slaves_done must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_count_inst: component_dpi_controller_count_inst.dpi_control_stream_writes_active must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_count_inst: component_dpi_controller_count_inst.readback_from_slaves must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_count_inst: component_dpi_controller_count_inst.returndata must be exported, or connected to a matching conduit.
+Warning: tb.stream_source_dpi_bfm_count_k_inst: stream_source_dpi_bfm_count_k_inst.source must be exported, or connected to a matching conduit.
+Warning: tb.stream_source_dpi_bfm_count_v_inst: stream_source_dpi_bfm_count_v_inst.source must be exported, or connected to a matching conduit.
+Info: tb: "Transforming system: tb"
+Info: tb: Running transform generation_view_transform
+Info: tb: Running transform generation_view_transform took 0.000s
+Info: clock_reset_inst: Running transform generation_view_transform
+Info: clock_reset_inst: Running transform generation_view_transform took 0.000s
+Info: component_dpi_controller_count_inst: Running transform generation_view_transform
+Info: component_dpi_controller_count_inst: Running transform generation_view_transform took 0.000s
+Info: concatenate_component_done_inst: Running transform generation_view_transform
+Info: concatenate_component_done_inst: Running transform generation_view_transform took 0.000s
+Info: concatenate_component_wait_for_stream_writes_inst: Running transform generation_view_transform
+Info: concatenate_component_wait_for_stream_writes_inst: Running transform generation_view_transform took 0.000s
+Info: count_component_dpi_controller_bind_conduit_fanout_inst: Running transform generation_view_transform
+Info: count_component_dpi_controller_bind_conduit_fanout_inst: Running transform generation_view_transform took 0.000s
+Info: count_component_dpi_controller_enable_conduit_fanout_inst: Running transform generation_view_transform
+Info: count_component_dpi_controller_enable_conduit_fanout_inst: Running transform generation_view_transform took 0.000s
+Info: count_component_dpi_controller_implicit_ready_conduit_fanout_inst: Running transform generation_view_transform
+Info: count_component_dpi_controller_implicit_ready_conduit_fanout_inst: Running transform generation_view_transform took 0.000s
+Info: count_inst: Running transform generation_view_transform
+Info: count_inst: Running transform generation_view_transform took 0.000s
+Info: main_dpi_controller_inst: Running transform generation_view_transform
+Info: main_dpi_controller_inst: Running transform generation_view_transform took 0.000s
+Info: mm_slave_dpi_bfm_count_avmm_0_rw_inst: Running transform generation_view_transform
+Info: mm_slave_dpi_bfm_count_avmm_0_rw_inst: Running transform generation_view_transform took 0.000s
+Info: split_component_start_inst: Running transform generation_view_transform
+Info: split_component_start_inst: Running transform generation_view_transform took 0.000s
+Info: stream_source_dpi_bfm_count_k_inst: Running transform generation_view_transform
+Info: stream_source_dpi_bfm_count_k_inst: Running transform generation_view_transform took 0.000s
+Info: stream_source_dpi_bfm_count_v_inst: Running transform generation_view_transform
+Info: stream_source_dpi_bfm_count_v_inst: Running transform generation_view_transform took 0.000s
+Info: count_internal_inst: Running transform generation_view_transform
+Info: count_internal_inst: Running transform generation_view_transform took 0.000s
+Info: tb: Running transform merlin_avalon_transform
+Info: tb: Running transform merlin_avalon_transform took 2.160s
+Info: count_inst: Running transform merlin_avalon_transform
+Info: count_inst: Running transform merlin_avalon_transform took 0.011s
+Info: tb: "Naming system components in system: tb"
+Info: tb: "Processing generation queue"
+Info: tb: "Generating: tb"
+Info: tb: "Generating: hls_sim_clock_reset"
+Info: tb: "Generating: hls_sim_component_dpi_controller"
+Info: tb: "Generating: tb_avalon_concatenate_singlebit_conduits_10_bjzeuhq"
+Info: tb: "Generating: tb_avalon_conduit_fanout_10_ak2cvai"
+Info: tb: "Generating: tb_avalon_conduit_fanout_10_kcgql6q"
+Info: tb: "Generating: tb_count_10_gbu7t7a"
+Info: tb: "Generating: hls_sim_main_dpi_controller"
+Info: tb: "Generating: hls_sim_mm_slave_dpi_bfm"
+Info: tb: "Generating: tb_avalon_split_multibit_conduit_10_dlmo3na"
+Info: tb: "Generating: hls_sim_stream_source_dpi_bfm"
+Info: tb: "Generating: tb_altera_irq_mapper_191_elrdrwq"
+Info: tb: "Generating: count_internal"
+Info: tb: Done "tb" with 13 modules, 177 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=D:\intelFPGA\19.1\hls\examples\Proj\test-fpga.prj\verification\tb\tb.spd --output-directory=D:/intelFPGA/19.1/hls/examples/Proj/test-fpga.prj/verification/tb/sim/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=D:\intelFPGA\19.1\hls\examples\Proj\test-fpga.prj\verification\tb\tb.spd --output-directory=D:/intelFPGA/19.1/hls/examples/Proj/test-fpga.prj/verification/tb/sim/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in D:/intelFPGA/19.1/hls/examples/Proj/test-fpga.prj/verification/tb/sim/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in D:/intelFPGA/19.1/hls/examples/Proj/test-fpga.prj/verification/tb/sim/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in D:/intelFPGA/19.1/hls/examples/Proj/test-fpga.prj/verification/tb/sim/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	12 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in D:/intelFPGA/19.1/hls/examples/Proj/test-fpga.prj/verification/tb/sim/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/intelFPGA/19.1/hls/examples/Proj/test-fpga.prj/verification/tb/sim/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.

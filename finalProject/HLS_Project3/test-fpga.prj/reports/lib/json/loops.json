@@ -1,0 +1,463 @@
+{
+  "columns":
+  ["", "Pipelined", "II", "Bottleneck", "Details"]
+  , "children":
+  [
+    {
+      "name":"Component: count"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"counter.cpp"
+            , "line":8
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Task function"
+        }
+        , {
+          "type":"text"
+          , "text":"Task function"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"count.B1.start"
+          , "data":
+          ["Yes", "~66", "II"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"Component invocation"
+                , "line":0
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Compiler failed to schedule this loop with smaller II due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"14"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"28"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Compiler failed to schedule this loop with smaller II due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"15"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"29"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Compiler failed to schedule this loop with smaller II due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"25"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"28"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Compiler failed to schedule this loop with smaller II due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"25"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"29"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Compiler failed to schedule this loop with smaller II due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"25"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"28"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Compiler failed to schedule this loop with smaller II due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"25"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"29"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Compiler failed to schedule this loop with smaller II due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"26"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"28"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Compiler failed to schedule this loop with smaller II due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"26"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"29"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Compiler failed to schedule this loop with smaller II due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"26"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"28"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Compiler failed to schedule this loop with smaller II due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"26"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"29"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"The critical path that prevented successful II = 65 scheduling:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"1.3 clock cycle Select Operation (%L, %L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"15"
+                    }
+                    , {
+                      "filename":"counter.cpp"
+                      , "line":"26"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"0.88 clock cycles 32-bit Integer Add Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"26"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"0.88 clock cycles 32-bit Integer Add Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"25"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"0.88 clock cycles 32-bit Integer Add Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"26"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"0.88 clock cycles 32-bit Integer Add Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"25"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"0.28 clock cycles Xor Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"26"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"0.28 clock cycles Xor Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"25"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"0.28 clock cycles Xor Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"25"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"0.28 clock cycles Xor Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"counter.cpp"
+                      , "line":"26"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"brief"
+              , "text":"Memory dependency"
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+            }
+          ]
+          , "children":
+          [
+          ]
+        }
+      ]
+    }
+  ]
+}

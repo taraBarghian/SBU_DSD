@@ -1,0 +1,20 @@
+Fitter Status : Successful - Mon Jun 28 23:22:07 2021
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : quartus_compile
+Top-level Entity Name : quartus_compile
+Family : Cyclone V
+Device : 5CSXFC6D6F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 2,719 / 41,910 ( 6 % )
+Total registers : 4908
+Total pins : 0 / 499 ( 0 % )
+Total virtual pins : 336
+Total block memory bits : 44,634 / 5,662,720 ( < 1 % )
+Total RAM Blocks : 36 / 553 ( 7 % )
+Total DSP Blocks : 0 / 112 ( 0 % )
+Total HSSI RX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )
+Total HSSI TX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 9 ( 0 % )
+Total PLLs : 0 / 15 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

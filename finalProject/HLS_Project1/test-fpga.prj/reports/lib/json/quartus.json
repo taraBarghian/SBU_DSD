@@ -1,0 +1,17 @@
+{
+"quartusFitClockSummary":
+{
+  "name":"Quartus Fit Clock Summary"
+  ,"columns":["", "1x clock fmax"]
+  ,"children":[
+  {
+    "name":"Frequency (MHz)","data":["1x clock fmax": 76.12]
+  }
+]}
+,"quartusFitResourceUsageSummary":
+{
+  "name":"Quartus Fit Resource Utilization Summary"
+  ,"columns":["", "ALMs", "FFs", "RAMs", "DSPs"]  ,"children":[
+  {"name":"count","data":["ALMs": 1714.0 ,"FFs": 3272 ,"RAMs": 24 ,"DSPs": 0]
+  }
+]}}

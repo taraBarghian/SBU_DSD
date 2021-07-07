@@ -1,0 +1,48 @@
+{
+  "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Component Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs "]
+    , "children":
+    [
+      {
+        "name":"count"
+        , "data":
+        [2349, 2399, 3, 0]
+        , "debug":
+        [
+          [
+            {
+              "filename":"counter.cpp"
+              , "line":8
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [2349, 2399, 3, 0]
+        , "data_percent":
+        [0.27493, 0.140391, 0.110579, 0]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [854400, 1708800, 2713, 1518]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+    ]
+  }
+}

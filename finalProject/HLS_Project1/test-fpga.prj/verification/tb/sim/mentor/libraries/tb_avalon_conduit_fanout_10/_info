@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dd:/intelFPGA/19.1/hls/examples/Proj/test-fpga.prj/verification
+vtb_avalon_conduit_fanout_10_ak2cvai
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1624780837
+!i10b 1
+!s100 h_=iO3zenfAHM=6T0:c:j3
+IAM>Y7feIYYX^PKD^>TRXl2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 tb_avalon_conduit_fanout_10_ak2cvai_sv_unit
+S1
+R0
+Z4 w1624780788
+8tb/sim/../avalon_conduit_fanout_10/sim/tb_avalon_conduit_fanout_10_ak2cvai.sv
+Ftb/sim/../avalon_conduit_fanout_10/sim/tb_avalon_conduit_fanout_10_ak2cvai.sv
+Z5 L0 36
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1624780837.000000
+!s107 tb/sim/../avalon_conduit_fanout_10/sim/tb_avalon_conduit_fanout_10_ak2cvai.sv|
+!s90 -sv|tb/sim/../avalon_conduit_fanout_10/sim/tb_avalon_conduit_fanout_10_ak2cvai.sv|-L|altera_common_sv_packages|-work|tb_avalon_conduit_fanout_10|
+!i113 1
+Z8 o-sv -L altera_common_sv_packages -work tb_avalon_conduit_fanout_10
+Z9 tCvgOpt 0
+vtb_avalon_conduit_fanout_10_kcgql6q
+R1
+R2
+!i10b 1
+!s100 lS_gTdzCchLEY9Ziz>k2;1
+INfD3[H4OhRg1nK310Hc550
+R3
+!s105 tb_avalon_conduit_fanout_10_kcgql6q_sv_unit
+S1
+R0
+R4
+8tb/sim/../avalon_conduit_fanout_10/sim/tb_avalon_conduit_fanout_10_kcgql6q.sv
+Ftb/sim/../avalon_conduit_fanout_10/sim/tb_avalon_conduit_fanout_10_kcgql6q.sv
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 tb/sim/../avalon_conduit_fanout_10/sim/tb_avalon_conduit_fanout_10_kcgql6q.sv|
+!s90 -sv|tb/sim/../avalon_conduit_fanout_10/sim/tb_avalon_conduit_fanout_10_kcgql6q.sv|-L|altera_common_sv_packages|-work|tb_avalon_conduit_fanout_10|
+!i113 1
+R8
+R9

@@ -1,0 +1,148 @@
+set_global_assignment -entity "count" -library "count" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "count" -library "count" -name IP_TOOL_VERSION "19.1"
+set_global_assignment -entity "count" -library "count" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "count" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../../count.sopcinfo"]
+set_global_assignment -entity "count" -library "count" -name SLD_INFO "QSYS_NAME count HAS_SOPCINFO 1 GENERATION_ID 1624906187"
+set_global_assignment -library "count" -name SLD_FILE [file join $::quartus(qip_path) "count.debuginfo"]
+set_global_assignment -entity "count" -library "count" -name IP_TARGETED_DEVICE_FAMILY "Cyclone V"
+set_global_assignment -entity "count" -library "count" -name IP_GENERATED_DEVICE_FAMILY "{Cyclone V}"
+set_global_assignment -entity "count" -library "count" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "count" -name MISC_FILE [file join $::quartus(qip_path) "../../../../components/count/count.qsys"]
+set_global_assignment -entity "count" -library "count" -name IP_COMPONENT_NAME "Y291bnQ="
+set_global_assignment -entity "count" -library "count" -name IP_COMPONENT_DISPLAY_NAME "Y291bnQ="
+set_global_assignment -entity "count" -library "count" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "count" -library "count" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "count" -library "count" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "count" -library "count" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYyNDkwNjE4Nw==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "count" -library "count" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "count" -library "count" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTWEZDNkQ2RjMxQzY=::QXV0byBERVZJQ0U="
+set_global_assignment -entity "count" -library "count" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Nl9INg==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "count" -library "count" -name IP_COMPONENT_PARAMETER "QVVUT19BVk1NXzBfUldfQUREUkVTU19XSURUSA==::QWRkcmVzc1dpZHRoID0gLTE=::QXV0byBBRERSRVNTX1dJRFRI"
+set_global_assignment -entity "count" -library "count" -name IP_COMPONENT_PARAMETER "QVVUT19DTE9DS19DTE9DS19SQVRF::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "count" -library "count" -name IP_COMPONENT_PARAMETER "QVVUT19DTE9DS19DTE9DS19ET01BSU4=::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "count" -library "count" -name IP_COMPONENT_PARAMETER "QVVUT19DTE9DS19SRVNFVF9ET01BSU4=::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_instance_assignment -entity "count_internal" -library "count" -name AUTO_SHIFT_REGISTER_RECOGNITION OFF -to *_NO_SHIFT_REG*
+set_global_assignment -entity "count_internal" -library "count" -name IP_COMPONENT_NAME "Y291bnRfaW50ZXJuYWw="
+set_global_assignment -entity "count_internal" -library "count" -name IP_COMPONENT_DISPLAY_NAME "Y291bnRfaW50ZXJuYWw="
+set_global_assignment -entity "count_internal" -library "count" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "count_internal" -library "count" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "count_internal" -library "count" -name IP_COMPONENT_VERSION "MS4w"
+
+set_global_assignment -library "count" -name VERILOG_FILE [file join $::quartus(qip_path) "count.v"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/dspba_library_package.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/dspba_library.vhd"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_data_fifo.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_fifo.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_ll_fifo.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_ll_ram_fifo.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_valid_fifo_counter.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_dspba_valid_fifo_counter.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_staging_reg.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hld_fifo.sv"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/hld_fifo_zero_width.sv"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_high_speed_fifo.sv"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_low_latency_fifo.sv"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_zero_latency_fifo.sv"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_fanout_pipeline.sv"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_std_synchronizer_nocut.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_tessellated_incr_decr_threshold.sv"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_tessellated_incr_lookahead.sv"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_reset_handler.sv"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_lfsr.sv"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_pop.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_push.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_token_fifo_counter.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_pipeline.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_dspba_buffer.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/st_top.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_top.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_permute_address.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_pipelined.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_enabled.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_basic_coalescer.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_simple.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_streaming.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_burst_master.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_bursting_load_stores.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_non_aligned_write.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_read_cache.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_atomic.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_prefetch_block.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_wide_wrapper.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_streaming_prefetch.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_aligned_burst_coalesced_lsu.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_toggle_detect.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_debug_mem.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_burst_coalesced_pipelined_write.sv"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/lsu_burst_coalesced_pipelined_read.sv"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_fifo_stall_valid_lookahead.sv"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_reset_wire.v"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/count_function_wrapper.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/count_function.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/bb_count_B1_start_sr_1.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/bb_count_B0_runOnce.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/bb_count_B0_runOnce_stall_region.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/count_B0_runOnce_merge_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pop_i1_wt_limpop_count0.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pop_i1_wt_limpop_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i1_wt_limpush_count2.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i1_wt_limpush_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/count_B0_runOnce_branch.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/count_B0_runOnce_merge.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/bb_count_B1_start.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/bb_count_B1_start_stall_region.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/count_B1_start_merge_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_iord_bl_do_unnamed_count0_count8.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pipeline_keep_going_count4.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pipeline_keep_going_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pop_i1_memdep_phi3_pop7_count16.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pop_i1_memdep_phi3_pop7_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pop_i1_memdep_phi_pop6_count12.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pop_i1_memdep_phi_pop6_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pop_i32_sum_count_4ia_addr_0_pop5_count10.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pop_i32_sum_count_4ia_addr_0_pop5_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pop_i32_y_count_4ia_addr_0_pop4_count20.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pop_i32_y_count_4ia_addr_0_pop4_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pop_i32_z_count_4ia_addr_0_pop3_count22.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pop_i32_z_count_4ia_addr_0_pop3_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i1_memdep_phi3_push7_count55.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i1_memdep_phi3_push7_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i1_memdep_phi_push6_count51.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i1_memdep_phi_push6_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i1_notexitcond_count6.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i1_notexitcond_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i32_sum_count_4ia_addr_0_push5_count24.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i32_sum_count_4ia_addr_0_push5_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i32_y_count_4ia_addr_0_push4_count33.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i32_y_count_4ia_addr_0_push4_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i32_z_count_4ia_addr_0_push3_count43.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_push_i32_z_count_4ia_addr_0_push3_count_reg.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_iowr_bl_return_unnamed_count7_count57.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_load_unnamed_count1_count14.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/readdata_reg_unnamed_count1_count0.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_load_unnamed_count2_count18.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/readdata_reg_unnamed_count2_count1.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_load_unnamed_count3_count27.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/readdata_reg_unnamed_count3_count2.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_load_unnamed_count4_count31.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/readdata_reg_unnamed_count4_count3.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_load_unnamed_count5_count37.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/readdata_reg_unnamed_count5_count4.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_load_unnamed_count6_count41.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/readdata_reg_unnamed_count6_count5.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_store_memdep_2_count53.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_store_memdep_count49.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/count_B1_start_branch.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/count_B1_start_merge.vhd"]
+set_global_assignment -library "count" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/i_acl_pipeline_keep_going_count_sr.vhd"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_avm_to_ic.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_ic_master_endpoint.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_arb_intf.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_ic_intf.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_ic_slave_endpoint.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_ic_slave_rrp.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_ic_slave_wrp.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_arb2.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/acl_ic_to_avm.v"]
+set_global_assignment -library "count" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/count_internal.v"]

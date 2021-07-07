@@ -1,0 +1,1935 @@
+Power Analyzer report for Project
+Mon Jun 28 22:03:59 2021
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Parallel Compilation
+  3. Power Analyzer Summary
+  4. Power Analyzer Settings
+  5. Indeterminate Toggle Rates
+  6. Operating Conditions Used
+  7. Thermal Power Dissipation by Block
+  8. Thermal Power Dissipation by Block Type
+  9. Thermal Power Dissipation by Hierarchy
+ 10. Core Dynamic Thermal Power Dissipation by Clock Domain
+ 11. Current Drawn from Voltage Supplies Summary
+ 12. VCCIO Supply Current Drawn by I/O Bank
+ 13. VCCIO Supply Current Drawn by Voltage
+ 14. VCCPD Supply Current Drawn by I/O Bank
+ 15. VCCPD Supply Current Drawn by Voltage
+ 16. Confidence Metric Details
+ 17. Signal Activities
+ 18. Power Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.24        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   7.9%      ;
+;     Processor 3            ;   7.9%      ;
+;     Processor 4            ;   7.9%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Power Analyzer Summary                                                                    ;
++----------------------------------------+--------------------------------------------------+
+; Power Analyzer Status                  ; Successful - Mon Jun 28 22:03:59 2021            ;
+; Quartus Prime Version                  ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition      ;
+; Revision Name                          ; Project                                          ;
+; Top-level Entity Name                  ; Project                                          ;
+; Family                                 ; Cyclone V                                        ;
+; Device                                 ; 5CSEMA5F31C6                                     ;
+; Power Models                           ; Final                                            ;
+; Total Thermal Power Dissipation        ; 441.43 mW                                        ;
+; Core Dynamic Thermal Power Dissipation ; 3.36 mW                                          ;
+; Core Static Thermal Power Dissipation  ; 411.35 mW                                        ;
+; I/O Thermal Power Dissipation          ; 26.71 mW                                         ;
+; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
++----------------------------------------+--------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Power Analyzer Settings                                                                                                  ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+; Option                                                           ; Setting                               ; Default Value ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+; Use smart compilation                                            ; Off                                   ; Off           ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                                    ; On            ;
+; Enable compact report table                                      ; Off                                   ; Off           ;
+; Default Power Input I/O Toggle Rate                              ; 12.5%                                 ; 12.5%         ;
+; Preset Cooling Solution                                          ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ;               ;
+; Board thermal model                                              ; None (CONSERVATIVE)                   ;               ;
+; Default Power Toggle Rate                                        ; 12.5%                                 ; 12.5%         ;
+; Use vectorless estimation                                        ; On                                    ; On            ;
+; Use Input Files                                                  ; Off                                   ; Off           ;
+; Filter Glitches in VCD File Reader                               ; On                                    ; On            ;
+; Power Analyzer Report Signal Activity                            ; Off                                   ; Off           ;
+; Power Analyzer Report Power Dissipation                          ; Off                                   ; Off           ;
+; Device Power Characteristics                                     ; TYPICAL                               ; TYPICAL       ;
+; Automatically Compute Junction Temperature                       ; On                                    ; On            ;
+; Specified Junction Temperature                                   ; 25                                    ; 25            ;
+; Ambient Temperature                                              ; 25                                    ; 25            ;
+; Use Custom Cooling Solution                                      ; Off                                   ; Off           ;
+; Board Temperature                                                ; 25                                    ; 25            ;
+; Enable HPS                                                       ; Off                                   ; Off           ;
+; Processor Frequency                                              ; 0.0                                   ; 0.0           ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+
+
++-----------------------------------------+
+; Indeterminate Toggle Rates              ;
++-----------+-----------------------------+
+; Node      ; Reason                      ;
++-----------+-----------------------------+
+; value[1]  ; No valid clock domain found ;
+; value[2]  ; No valid clock domain found ;
+; value[3]  ; No valid clock domain found ;
+; value[4]  ; No valid clock domain found ;
+; value[5]  ; No valid clock domain found ;
+; value[6]  ; No valid clock domain found ;
+; value[7]  ; No valid clock domain found ;
+; value[8]  ; No valid clock domain found ;
+; value[9]  ; No valid clock domain found ;
+; value[10] ; No valid clock domain found ;
+; value[11] ; No valid clock domain found ;
+; value[12] ; No valid clock domain found ;
+; value[13] ; No valid clock domain found ;
+; value[14] ; No valid clock domain found ;
+; value[15] ; No valid clock domain found ;
+; value[16] ; No valid clock domain found ;
+; value[17] ; No valid clock domain found ;
+; value[18] ; No valid clock domain found ;
+; value[19] ; No valid clock domain found ;
+; value[20] ; No valid clock domain found ;
+; value[21] ; No valid clock domain found ;
+; value[22] ; No valid clock domain found ;
+; value[23] ; No valid clock domain found ;
+; value[24] ; No valid clock domain found ;
+; value[25] ; No valid clock domain found ;
+; value[26] ; No valid clock domain found ;
+; value[27] ; No valid clock domain found ;
+; value[28] ; No valid clock domain found ;
+; value[29] ; No valid clock domain found ;
+; value[30] ; No valid clock domain found ;
+; value[31] ; No valid clock domain found ;
+; value[32] ; No valid clock domain found ;
+; value[33] ; No valid clock domain found ;
+; value[34] ; No valid clock domain found ;
+; value[35] ; No valid clock domain found ;
+; value[36] ; No valid clock domain found ;
+; value[37] ; No valid clock domain found ;
+; value[38] ; No valid clock domain found ;
+; value[39] ; No valid clock domain found ;
+; value[40] ; No valid clock domain found ;
+; value[41] ; No valid clock domain found ;
+; value[42] ; No valid clock domain found ;
+; value[43] ; No valid clock domain found ;
+; value[44] ; No valid clock domain found ;
+; value[45] ; No valid clock domain found ;
+; value[46] ; No valid clock domain found ;
+; value[47] ; No valid clock domain found ;
+; value[48] ; No valid clock domain found ;
+; value[49] ; No valid clock domain found ;
+; value[50] ; No valid clock domain found ;
+; value[51] ; No valid clock domain found ;
+; value[52] ; No valid clock domain found ;
+; value[53] ; No valid clock domain found ;
+; value[54] ; No valid clock domain found ;
+; value[55] ; No valid clock domain found ;
+; value[56] ; No valid clock domain found ;
+; value[57] ; No valid clock domain found ;
+; value[58] ; No valid clock domain found ;
+; value[59] ; No valid clock domain found ;
+; value[60] ; No valid clock domain found ;
+; value[61] ; No valid clock domain found ;
+; value[62] ; No valid clock domain found ;
+; value[0]  ; No valid clock domain found ;
+; value[63] ; No valid clock domain found ;
+; key[1]    ; No valid clock domain found ;
+; key[2]    ; No valid clock domain found ;
+; key[3]    ; No valid clock domain found ;
+; key[64]   ; No valid clock domain found ;
+; key[65]   ; No valid clock domain found ;
+; key[66]   ; No valid clock domain found ;
+; key[67]   ; No valid clock domain found ;
+; key[33]   ; No valid clock domain found ;
+; key[34]   ; No valid clock domain found ;
+; key[35]   ; No valid clock domain found ;
+; key[36]   ; No valid clock domain found ;
+; key[4]    ; No valid clock domain found ;
+; key[37]   ; No valid clock domain found ;
+; key[5]    ; No valid clock domain found ;
+; key[38]   ; No valid clock domain found ;
+; key[6]    ; No valid clock domain found ;
+; key[39]   ; No valid clock domain found ;
+; key[7]    ; No valid clock domain found ;
+; key[40]   ; No valid clock domain found ;
+; key[8]    ; No valid clock domain found ;
+; key[41]   ; No valid clock domain found ;
+; key[9]    ; No valid clock domain found ;
+; key[43]   ; No valid clock domain found ;
+; key[11]   ; No valid clock domain found ;
+; key[44]   ; No valid clock domain found ;
+; key[12]   ; No valid clock domain found ;
+; key[45]   ; No valid clock domain found ;
+; key[13]   ; No valid clock domain found ;
+; key[46]   ; No valid clock domain found ;
+; key[14]   ; No valid clock domain found ;
+; key[47]   ; No valid clock domain found ;
+; key[15]   ; No valid clock domain found ;
+; key[48]   ; No valid clock domain found ;
+; key[16]   ; No valid clock domain found ;
+; key[49]   ; No valid clock domain found ;
+; key[17]   ; No valid clock domain found ;
+; key[50]   ; No valid clock domain found ;
+; key[18]   ; No valid clock domain found ;
+; key[51]   ; No valid clock domain found ;
+; key[19]   ; No valid clock domain found ;
+; key[53]   ; No valid clock domain found ;
+; key[21]   ; No valid clock domain found ;
+; key[54]   ; No valid clock domain found ;
+; key[22]   ; No valid clock domain found ;
+; key[55]   ; No valid clock domain found ;
+; key[23]   ; No valid clock domain found ;
+; key[56]   ; No valid clock domain found ;
+; key[24]   ; No valid clock domain found ;
+; key[57]   ; No valid clock domain found ;
+; key[25]   ; No valid clock domain found ;
+; key[60]   ; No valid clock domain found ;
+; key[28]   ; No valid clock domain found ;
+; key[61]   ; No valid clock domain found ;
+; key[29]   ; No valid clock domain found ;
+; key[63]   ; No valid clock domain found ;
+; key[31]   ; No valid clock domain found ;
+; key[96]   ; No valid clock domain found ;
+; key[97]   ; No valid clock domain found ;
+; key[98]   ; No valid clock domain found ;
+; key[99]   ; No valid clock domain found ;
+; key[100]  ; No valid clock domain found ;
+; key[68]   ; No valid clock domain found ;
+; key[102]  ; No valid clock domain found ;
+; key[70]   ; No valid clock domain found ;
+; key[103]  ; No valid clock domain found ;
+; key[71]   ; No valid clock domain found ;
+; key[104]  ; No valid clock domain found ;
+; key[72]   ; No valid clock domain found ;
+; key[105]  ; No valid clock domain found ;
+; key[73]   ; No valid clock domain found ;
+; key[106]  ; No valid clock domain found ;
+; key[74]   ; No valid clock domain found ;
+; key[107]  ; No valid clock domain found ;
+; key[75]   ; No valid clock domain found ;
+; key[108]  ; No valid clock domain found ;
+; key[76]   ; No valid clock domain found ;
+; key[109]  ; No valid clock domain found ;
+; key[77]   ; No valid clock domain found ;
+; key[110]  ; No valid clock domain found ;
+; key[78]   ; No valid clock domain found ;
+; key[112]  ; No valid clock domain found ;
+; key[80]   ; No valid clock domain found ;
+; key[113]  ; No valid clock domain found ;
+; key[81]   ; No valid clock domain found ;
+; key[114]  ; No valid clock domain found ;
+; key[82]   ; No valid clock domain found ;
+; key[115]  ; No valid clock domain found ;
+; key[83]   ; No valid clock domain found ;
+; key[116]  ; No valid clock domain found ;
+; key[84]   ; No valid clock domain found ;
+; key[117]  ; No valid clock domain found ;
+; key[85]   ; No valid clock domain found ;
+; key[118]  ; No valid clock domain found ;
+; key[86]   ; No valid clock domain found ;
+; key[119]  ; No valid clock domain found ;
+; key[87]   ; No valid clock domain found ;
+; key[120]  ; No valid clock domain found ;
+; key[88]   ; No valid clock domain found ;
+; key[122]  ; No valid clock domain found ;
+; key[90]   ; No valid clock domain found ;
+; key[124]  ; No valid clock domain found ;
+; key[92]   ; No valid clock domain found ;
+; key[125]  ; No valid clock domain found ;
+; key[93]   ; No valid clock domain found ;
+; key[94]   ; No valid clock domain found ;
+; key[126]  ; No valid clock domain found ;
+; key[0]    ; No valid clock domain found ;
+; key[32]   ; No valid clock domain found ;
+; key[42]   ; No valid clock domain found ;
+; key[10]   ; No valid clock domain found ;
+; key[52]   ; No valid clock domain found ;
+; key[20]   ; No valid clock domain found ;
+; key[58]   ; No valid clock domain found ;
+; key[26]   ; No valid clock domain found ;
+; key[59]   ; No valid clock domain found ;
+; key[27]   ; No valid clock domain found ;
+; key[62]   ; No valid clock domain found ;
+; key[30]   ; No valid clock domain found ;
+; key[101]  ; No valid clock domain found ;
+; key[69]   ; No valid clock domain found ;
+; key[111]  ; No valid clock domain found ;
+; key[79]   ; No valid clock domain found ;
+; key[121]  ; No valid clock domain found ;
+; key[89]   ; No valid clock domain found ;
+; key[123]  ; No valid clock domain found ;
+; key[91]   ; No valid clock domain found ;
+; key[95]   ; No valid clock domain found ;
+; key[127]  ; No valid clock domain found ;
++-----------+-----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Operating Conditions Used                                               ;
++---------------------------------------------+---------------------------+
+; Setting                                     ; Value                     ;
++---------------------------------------------+---------------------------+
+; Device power characteristics                ; Typical                   ;
+;                                             ;                           ;
+; Voltages                                    ;                           ;
+;     VCC                                     ; 1.10 V                    ;
+;     VCCA_FPLL                               ; 2.50 V                    ;
+;     VCCPGM                                  ; 1.80 V                    ;
+;     VCCBAT                                  ; 1.20 V                    ;
+;     VCCE_GXB                                ; 1.10 V                    ;
+;     VCCL_GXB                                ; 1.10 V                    ;
+;     VCCH_GXB                                ; 2.50 V                    ;
+;     VCCAUX                                  ; 2.50 V                    ;
+;     VCC_HPS                                 ; 1.10 V                    ;
+;     VCCRSTCLK_HPS                           ; 1.80 V                    ;
+;     VCCPLL_HPS                              ; 2.50 V                    ;
+;     VCCAUX_SHARED                           ; 2.50 V                    ;
+;     2.5 V I/O Standard                      ; 2.5 V                     ;
+;                                             ;                           ;
+; Auto computed junction temperature          ; 27.0 degrees Celsius      ;
+;     Ambient temperature                     ; 25.0 degrees Celsius      ;
+;     Junction-to-Case thermal resistance     ; 2.30 degrees Celsius/Watt ;
+;     Case-to-Heat Sink thermal resistance    ; 0.10 degrees Celsius/Watt ;
+;     Heat Sink-to-Ambient thermal resistance ; 2.10 degrees Celsius/Watt ;
+;                                             ;                           ;
+; Board model used                            ; None                      ;
++---------------------------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block                                                                                                           ;
++------------+------------+---------------------+-----------------------------+--------------------------------+-------------------------------+
+; Block Name ; Block Type ; Total Thermal Power ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ;
++------------+------------+---------------------+-----------------------------+--------------------------------+-------------------------------+
+(1) The "Thermal Power Dissipation by Block" Table has been hidden. To show this table, please select the "Write power dissipation by block to report file" option under "PowerPlay Power Analyzer Settings".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block Type                                                                                                                                                                           ;
++--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Block Type         ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
++--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Combinational cell ; 0.88 mW                           ; 0.85 mW                     ; --                             ; 0.03 mW                       ;    0.367                                                  ;
+; Clock enable block ; 1.81 mW                           ; 0.00 mW                     ; --                             ; 1.81 mW                       ; 1000.000                                                  ;
+; Register cell      ; 0.54 mW                           ; 0.06 mW                     ; --                             ; 0.48 mW                       ;   62.500                                                  ;
+; I/O                ; 18.84 mW                          ; 3.88 mW                     ; 14.84 mW                       ; 0.13 mW                       ;    4.561                                                  ;
++--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+(1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                         ;
++-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-----------------------------------------+
+; Compilation Hierarchy Node          ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                     ;
++-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-----------------------------------------+
+; |Project                            ; 22.08 mW (22.08 mW)                  ; 4.79 mW (4.79 mW)               ; 14.84 mW (14.84 mW)               ; 2.45 mW (2.45 mW)                 ; |Project                                ;
+;     |hard_block:auto_generated_inst ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Project|hard_block:auto_generated_inst ;
++-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-----------------------------------------+
+(1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
+
+(2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++-----------------------------------------------------------------+
+; Core Dynamic Thermal Power Dissipation by Clock Domain          ;
++--------------+-----------------------+--------------------------+
+; Clock Domain ; Clock Frequency (MHz) ; Total Core Dynamic Power ;
++--------------+-----------------------+--------------------------+
+; clk          ; 500.00                ; 3.36                     ;
++--------------+-----------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Current Drawn from Voltage Supplies Summary                                                                                        ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; VCC            ; 65.01 mA                ; 3.76 mA                   ; 61.25 mA                 ; 65.01 mA                         ;
+; VCCIO          ; 1.78 mA                 ; 0.66 mA                   ; 1.11 mA                  ; 1.78 mA                          ;
+; VCCPD          ; 2.88 mA                 ; 0.30 mA                   ; 2.57 mA                  ; 2.88 mA                          ;
+; VCCA_FPLL      ; 2.03 mA                 ; 0.00 mA                   ; 2.03 mA                  ; 2.03 mA                          ;
+; VCCPGM         ; 0.33 mA                 ; 0.00 mA                   ; 0.33 mA                  ; 0.33 mA                          ;
+; VCCBAT         ; 0.00 mA                 ; 0.00 mA                   ; 0.00 mA                  ; 0.00 mA                          ;
+; VCCE_GXB       ; 0.00 mA                 ; 0.00 mA                   ; 0.00 mA                  ; 0.00 mA                          ;
+; VCCL_GXB       ; 0.00 mA                 ; 0.00 mA                   ; 0.00 mA                  ; 0.00 mA                          ;
+; VCCH_GXB       ; 0.00 mA                 ; 0.00 mA                   ; 0.00 mA                  ; 0.00 mA                          ;
+; VCCAUX         ; 87.01 mA                ; 0.00 mA                   ; 87.01 mA                 ; 87.01 mA                         ;
+; VCC_HPS        ; 9.53 mA                 ; 0.00 mA                   ; 9.53 mA                  ; 9.53 mA                          ;
+; VCCIO_HPS      ; 0.00 mA                 ; 0.00 mA                   ; 0.00 mA                  ; 0.00 mA                          ;
+; VCCPD_HPS      ; 0.00 mA                 ; 0.00 mA                   ; 0.00 mA                  ; 0.00 mA                          ;
+; VCCRSTCLK_HPS  ; 0.14 mA                 ; 0.00 mA                   ; 0.14 mA                  ; 0.14 mA                          ;
+; VCCPLL_HPS     ; 0.66 mA                 ; 0.00 mA                   ; 0.66 mA                  ; 0.66 mA                          ;
+; VCCAUX_SHARED  ; 48.74 mA                ; 0.00 mA                   ; 48.74 mA                 ; 48.74 mA                         ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+(1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
+(2) Currents reported in column "Minimum Power Supply Current" do not include transient power-up currents. For transient power-up currents, see the device family datasheet, errata sheet, and/or ES guidelines document, as appropriate. 
+
+
++-----------------------------------------------------------------------------------------------+
+; VCCIO Supply Current Drawn by I/O Bank                                                        ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; I/O Bank ; VCCIO Voltage ; Total Current Drawn ; Dynamic Current Drawn ; Static Current Drawn ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; B2L      ; --            ; --                  ; --                    ; --                   ;
+; B1L      ; --            ; --                  ; --                    ; --                   ;
+; B0L      ; --            ; --                  ; --                    ; --                   ;
+; 3A       ; 2.5V          ; 0.10 mA             ; 0.00 mA               ; 0.10 mA              ;
+; 3B       ; 2.5V          ; 0.12 mA             ; 0.00 mA               ; 0.12 mA              ;
+; 4A       ; 2.5V          ; 0.58 mA             ; 0.42 mA               ; 0.15 mA              ;
+; 5A       ; 2.5V          ; 0.10 mA             ; 0.00 mA               ; 0.10 mA              ;
+; 5B       ; 2.5V          ; 0.30 mA             ; 0.21 mA               ; 0.08 mA              ;
+; 6B       ; 2.5V          ; 0.07 mA             ; 0.00 mA               ; 0.07 mA              ;
+; 6A       ; 2.5V          ; 0.07 mA             ; 0.00 mA               ; 0.07 mA              ;
+; 7A       ; 2.5V          ; 0.07 mA             ; 0.00 mA               ; 0.07 mA              ;
+; 7B       ; 2.5V          ; 0.07 mA             ; 0.00 mA               ; 0.07 mA              ;
+; 7C       ; 2.5V          ; 0.07 mA             ; 0.00 mA               ; 0.07 mA              ;
+; 7D       ; 2.5V          ; 0.07 mA             ; 0.00 mA               ; 0.07 mA              ;
+; 8A       ; 2.5V          ; 0.15 mA             ; 0.03 mA               ; 0.12 mA              ;
+; 9A       ; --            ; --                  ; --                    ; --                   ;
++----------+---------------+---------------------+-----------------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; VCCIO Supply Current Drawn by Voltage                                                                                             ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; 2.5V          ; 1.78 mA                 ; 0.66 mA                   ; 1.11 mA                  ; 1.78 mA                          ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+(1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
+(2) Currents reported in column "Minimum Power Supply Current" do not include transient power-up currents. For transient power-up currents, see the device family datasheet, errata sheet, and/or ES guidelines document, as appropriate. 
+
+
++-----------------------------------------------------------------------------------------------+
+; VCCPD Supply Current Drawn by I/O Bank                                                        ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; I/O Bank ; VCCPD Voltage ; Total Current Drawn ; Dynamic Current Drawn ; Static Current Drawn ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; B2L      ; --            ; --                  ; --                    ; --                   ;
+; B1L      ; --            ; --                  ; --                    ; --                   ;
+; B0L      ; --            ; --                  ; --                    ; --                   ;
+; 3A       ; 2.5V          ; 0.22 mA             ; 0.00 mA               ; 0.22 mA              ;
+; 3B       ; 2.5V          ; 0.24 mA             ; 0.00 mA               ; 0.24 mA              ;
+; 4A       ; 2.5V          ; 0.53 mA             ; 0.26 mA               ; 0.26 mA              ;
+; 5A       ; 2.5V          ; 0.22 mA             ; 0.00 mA               ; 0.22 mA              ;
+; 5B       ; 2.5V          ; 0.25 mA             ; 0.04 mA               ; 0.21 mA              ;
+; 6B       ; 2.5V          ; 0.20 mA             ; 0.00 mA               ; 0.20 mA              ;
+; 6A       ; 2.5V          ; 0.20 mA             ; 0.00 mA               ; 0.20 mA              ;
+; 7A       ; 2.5V          ; 0.20 mA             ; 0.00 mA               ; 0.20 mA              ;
+; 7B       ; 2.5V          ; 0.20 mA             ; 0.00 mA               ; 0.20 mA              ;
+; 7C       ; 2.5V          ; 0.20 mA             ; 0.00 mA               ; 0.20 mA              ;
+; 7D       ; 2.5V          ; 0.20 mA             ; 0.00 mA               ; 0.20 mA              ;
+; 8A       ; 2.5V          ; 0.24 mA             ; 0.00 mA               ; 0.24 mA              ;
+; 9A       ; --            ; --                  ; --                    ; --                   ;
++----------+---------------+---------------------+-----------------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; VCCPD Supply Current Drawn by Voltage                                                                                             ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; VCCPD Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; 2.5V          ; 2.88 mA                 ; 0.30 mA                   ; 2.57 mA                  ; 2.88 mA                          ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+(1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
+(2) Currents reported in column "Minimum Power Supply Current" do not include transient power-up currents. For transient power-up currents, see the device family datasheet, errata sheet, and/or ES guidelines document, as appropriate. 
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Confidence Metric Details                                                                                                                        ;
++----------------------------------------------------------------------------------------+--------------+-------------+------------+---------------+
+; Data Source                                                                            ; Total        ; Pin         ; Registered ; Combinational ;
++----------------------------------------------------------------------------------------+--------------+-------------+------------+---------------+
+; Simulation (from file)                                                                 ;              ;             ;            ;               ;
+;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)     ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)     ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)      ;
+;                                                                                        ;              ;             ;            ;               ;
+; Node, entity or clock assignment                                                       ;              ;             ;            ;               ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 2 (0.1%)     ; 1 (0.4%)    ; 0 (0.0%)   ; 1 (0.1%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 2 (0.1%)     ; 1 (0.4%)    ; 0 (0.0%)   ; 1 (0.1%)      ;
+;                                                                                        ;              ;             ;            ;               ;
+; Vectorless estimation                                                                  ;              ;             ;            ;               ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 1150 (85.4%) ; 65 (25.0%)  ; 7 (100.0%) ; 1078 (99.9%)  ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 192 (14.3%)  ; 0 (0.0%)    ; 0 (0.0%)   ; 192 (17.8%)   ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 1150 (85.4%) ; 65 (25.0%)  ; 7 (100.0%) ; 1078 (99.9%)  ;
+;                                                                                        ;              ;             ;            ;               ;
+; Default assignment                                                                     ;              ;             ;            ;               ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 2 (0.1%)     ; 2 (0.8%)    ; 0 (0.0%)   ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 194 (14.4%)  ; 194 (74.6%) ; 0 (0.0%)   ; 0 (0.0%)      ;
+;                                                                                        ;              ;             ;            ;               ;
+; Assumed 0                                                                              ;              ;             ;            ;               ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 192 (14.3%)  ; 192 (73.8%) ; 0 (0.0%)   ; 0 (0.0%)      ;
++----------------------------------------------------------------------------------------+--------------+-------------+------------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Activities                                                                                                                           ;
++--------+------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+; Signal ; Type ; Toggle Rate (millions of transitions / sec) ; Toggle Rate Data Source ; Static Probability ; Static Probability Data Source ;
++--------+------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+(1) The "Signal Activity" Table has been hidden. To show this table, please select the "Write signal activities to report file" option under "PowerPlay Power Analyzer Settings".
+
+
++-------------------------+
+; Power Analyzer Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Power Analyzer
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Mon Jun 28 22:03:51 2021
+Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off Project -c Project
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): The Timing Analyzer is analyzing 128 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Info (332104): Reading SDC File: 'quartus_compile.sdc'
+Warning (332125): Found combinational loop of 1282 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add4~1|cin"
+    Warning (332126): Node "Add4~1|cout"
+    Warning (332126): Node "Add4~5|cin"
+    Warning (332126): Node "Add4~5|sumout"
+    Warning (332126): Node "Add5~32|datac"
+    Warning (332126): Node "Add5~32|sumout"
+    Warning (332126): Node "yt~5|datac"
+    Warning (332126): Node "yt~5|combout"
+    Warning (332126): Node "Add8~25|datad"
+    Warning (332126): Node "Add8~25|sumout"
+    Warning (332126): Node "Add8~25|datac"
+    Warning (332126): Node "Add8~25|cout"
+    Warning (332126): Node "Add8~29|cin"
+    Warning (332126): Node "Add8~29|cout"
+    Warning (332126): Node "Add8~33|cin"
+    Warning (332126): Node "Add8~33|cout"
+    Warning (332126): Node "Add8~37|cin"
+    Warning (332126): Node "Add8~37|sumout"
+    Warning (332126): Node "Add8~37|datac"
+    Warning (332126): Node "Add8~37|cout"
+    Warning (332126): Node "Add8~41|cin"
+    Warning (332126): Node "Add8~41|sumout"
+    Warning (332126): Node "Add3~17|datac"
+    Warning (332126): Node "Add3~17|sumout"
+    Warning (332126): Node "zt~4|datad"
+    Warning (332126): Node "zt~4|combout"
+    Warning (332126): Node "Add4~17|datad"
+    Warning (332126): Node "Add4~17|sumout"
+    Warning (332126): Node "Add4~17|datac"
+    Warning (332126): Node "Add4~17|cout"
+    Warning (332126): Node "Add4~21|cin"
+    Warning (332126): Node "Add4~21|cout"
+    Warning (332126): Node "Add4~25|cin"
+    Warning (332126): Node "Add4~25|cout"
+    Warning (332126): Node "Add4~29|cin"
+    Warning (332126): Node "Add4~29|cout"
+    Warning (332126): Node "Add4~33|cin"
+    Warning (332126): Node "Add4~33|sumout"
+    Warning (332126): Node "Add4~33|datac"
+    Warning (332126): Node "Add4~33|cout"
+    Warning (332126): Node "Add4~37|cin"
+    Warning (332126): Node "Add4~37|cout"
+    Warning (332126): Node "Add4~41|cin"
+    Warning (332126): Node "Add4~41|sumout"
+    Warning (332126): Node "Add7~21|datad"
+    Warning (332126): Node "Add7~21|sumout"
+    Warning (332126): Node "yt~5|datae"
+    Warning (332126): Node "Add7~21|cout"
+    Warning (332126): Node "Add7~25|cin"
+    Warning (332126): Node "Add7~25|cout"
+    Warning (332126): Node "Add7~29|cin"
+    Warning (332126): Node "Add7~29|cout"
+    Warning (332126): Node "Add7~33|cin"
+    Warning (332126): Node "Add7~33|cout"
+    Warning (332126): Node "Add7~37|cin"
+    Warning (332126): Node "Add7~37|cout"
+    Warning (332126): Node "Add7~41|cin"
+    Warning (332126): Node "Add7~41|sumout"
+    Warning (332126): Node "yt~10|datae"
+    Warning (332126): Node "yt~10|combout"
+    Warning (332126): Node "Add8~45|datad"
+    Warning (332126): Node "Add8~45|cout"
+    Warning (332126): Node "Add8~49|cin"
+    Warning (332126): Node "Add8~49|cout"
+    Warning (332126): Node "Add8~53|cin"
+    Warning (332126): Node "Add8~53|cout"
+    Warning (332126): Node "Add8~57|cin"
+    Warning (332126): Node "Add8~57|sumout"
+    Warning (332126): Node "Add3~33|datac"
+    Warning (332126): Node "Add3~33|sumout"
+    Warning (332126): Node "zt~8|datac"
+    Warning (332126): Node "zt~8|combout"
+    Warning (332126): Node "Add4~33|datad"
+    Warning (332126): Node "Add3~33|cout"
+    Warning (332126): Node "Add3~109|cin"
+    Warning (332126): Node "Add3~109|sumout"
+    Warning (332126): Node "zt~26|datad"
+    Warning (332126): Node "zt~26|combout"
+    Warning (332126): Node "Add4~37|datad"
+    Warning (332126): Node "Add4~37|sumout"
+    Warning (332126): Node "Add4~37|datac"
+    Warning (332126): Node "Add5~64|datac"
+    Warning (332126): Node "Add5~64|sumout"
+    Warning (332126): Node "yt~13|datad"
+    Warning (332126): Node "yt~13|combout"
+    Warning (332126): Node "Add8~57|datad"
+    Warning (332126): Node "Add8~57|cout"
+    Warning (332126): Node "Add8~61|cin"
+    Warning (332126): Node "Add8~61|sumout"
+    Warning (332126): Node "Add3~109|datac"
+    Warning (332126): Node "Add3~109|cout"
+    Warning (332126): Node "Add3~37|cin"
+    Warning (332126): Node "Add3~37|sumout"
+    Warning (332126): Node "zt~9|dataf"
+    Warning (332126): Node "zt~9|combout"
+    Warning (332126): Node "Add4~41|datad"
+    Warning (332126): Node "Add4~41|cout"
+    Warning (332126): Node "Add4~45|cin"
+    Warning (332126): Node "Add4~45|cout"
+    Warning (332126): Node "Add4~49|cin"
+    Warning (332126): Node "Add4~49|cout"
+    Warning (332126): Node "Add4~53|cin"
+    Warning (332126): Node "Add4~53|cout"
+    Warning (332126): Node "Add4~57|cin"
+    Warning (332126): Node "Add4~57|cout"
+    Warning (332126): Node "Add4~61|cin"
+    Warning (332126): Node "Add4~61|cout"
+    Warning (332126): Node "Add4~65|cin"
+    Warning (332126): Node "Add4~65|cout"
+    Warning (332126): Node "Add4~69|cin"
+    Warning (332126): Node "Add4~69|cout"
+    Warning (332126): Node "Add4~73|cin"
+    Warning (332126): Node "Add4~73|cout"
+    Warning (332126): Node "Add4~77|cin"
+    Warning (332126): Node "Add4~77|cout"
+    Warning (332126): Node "Add4~81|cin"
+    Warning (332126): Node "Add4~81|sumout"
+    Warning (332126): Node "Add7~57|datad"
+    Warning (332126): Node "Add7~57|sumout"
+    Warning (332126): Node "yt~14|datac"
+    Warning (332126): Node "yt~14|combout"
+    Warning (332126): Node "Add8~65|datad"
+    Warning (332126): Node "Add8~65|sumout"
+    Warning (332126): Node "Add8~65|datac"
+    Warning (332126): Node "Add8~65|cout"
+    Warning (332126): Node "Add8~69|cin"
+    Warning (332126): Node "Add8~69|sumout"
+    Warning (332126): Node "Add3~41|datac"
+    Warning (332126): Node "Add3~41|sumout"
+    Warning (332126): Node "zt~10|datad"
+    Warning (332126): Node "zt~10|combout"
+    Warning (332126): Node "Add4~45|datad"
+    Warning (332126): Node "Add4~45|sumout"
+    Warning (332126): Node "Add4~45|datac"
+    Warning (332126): Node "Add5~68|datac"
+    Warning (332126): Node "Add5~68|cout"
+    Warning (332126): Node "Add5~72|cin"
+    Warning (332126): Node "Add5~72|sumout"
+    Warning (332126): Node "yt~15|datad"
+    Warning (332126): Node "yt~15|combout"
+    Warning (332126): Node "Add8~69|datad"
+    Warning (332126): Node "Add8~69|cout"
+    Warning (332126): Node "Add8~73|cin"
+    Warning (332126): Node "Add8~73|cout"
+    Warning (332126): Node "Add8~77|cin"
+    Warning (332126): Node "Add8~77|cout"
+    Warning (332126): Node "Add8~81|cin"
+    Warning (332126): Node "Add8~81|cout"
+    Warning (332126): Node "Add8~85|cin"
+    Warning (332126): Node "Add8~85|sumout"
+    Warning (332126): Node "Add3~57|datac"
+    Warning (332126): Node "Add3~57|sumout"
+    Warning (332126): Node "zt~14|datac"
+    Warning (332126): Node "zt~14|combout"
+    Warning (332126): Node "Add4~61|datad"
+    Warning (332126): Node "Add4~61|sumout"
+    Warning (332126): Node "Add4~61|datac"
+    Warning (332126): Node "Add5~84|datac"
+    Warning (332126): Node "Add5~84|sumout"
+    Warning (332126): Node "yt~18|datac"
+    Warning (332126): Node "yt~18|combout"
+    Warning (332126): Node "Add8~81|datad"
+    Warning (332126): Node "Add8~81|sumout"
+    Warning (332126): Node "Add8~81|datac"
+    Warning (332126): Node "Add1~73|datac"
+    Warning (332126): Node "Add1~73|sumout"
+    Warning (332126): Node "zt~21|datac"
+    Warning (332126): Node "zt~21|combout"
+    Warning (332126): Node "Add4~93|datac"
+    Warning (332126): Node "Add4~93|cout"
+    Warning (332126): Node "Add4~97|cin"
+    Warning (332126): Node "Add4~97|cout"
+    Warning (332126): Node "Add4~101|cin"
+    Warning (332126): Node "Add4~101|sumout"
+    Warning (332126): Node "Add7~77|datad"
+    Warning (332126): Node "Add7~77|cout"
+    Warning (332126): Node "Add7~81|cin"
+    Warning (332126): Node "Add7~81|cout"
+    Warning (332126): Node "Add7~85|cin"
+    Warning (332126): Node "Add7~85|cout"
+    Warning (332126): Node "Add7~89|cin"
+    Warning (332126): Node "Add7~89|sumout"
+    Warning (332126): Node "yt~22|datac"
+    Warning (332126): Node "yt~22|combout"
+    Warning (332126): Node "Add8~97|datac"
+    Warning (332126): Node "Add8~97|sumout"
+    Warning (332126): Node "Add8~97|datab"
+    Warning (332126): Node "Add8~97|cout"
+    Warning (332126): Node "Add8~101|cin"
+    Warning (332126): Node "Add8~101|cout"
+    Warning (332126): Node "Add8~105|cin"
+    Warning (332126): Node "Add8~105|cout"
+    Warning (332126): Node "Add8~109|cin"
+    Warning (332126): Node "Add8~109|sumout"
+    Warning (332126): Node "Add3~77|datac"
+    Warning (332126): Node "Add3~77|sumout"
+    Warning (332126): Node "zt~19|datad"
+    Warning (332126): Node "zt~19|combout"
+    Warning (332126): Node "Add4~85|datad"
+    Warning (332126): Node "Add4~85|sumout"
+    Warning (332126): Node "Add4~85|datac"
+    Warning (332126): Node "Add4~85|cout"
+    Warning (332126): Node "Add4~89|cin"
+    Warning (332126): Node "Add4~89|sumout"
+    Warning (332126): Node "Add7~65|datac"
+    Warning (332126): Node "Add7~65|sumout"
+    Warning (332126): Node "yt~16|datac"
+    Warning (332126): Node "yt~16|combout"
+    Warning (332126): Node "Add8~73|datad"
+    Warning (332126): Node "Add8~73|sumout"
+    Warning (332126): Node "Add8~73|datac"
+    Warning (332126): Node "Add1~65|datac"
+    Warning (332126): Node "Add1~65|sumout"
+    Warning (332126): Node "zt~19|datae"
+    Warning (332126): Node "Add1~65|cout"
+    Warning (332126): Node "Add1~69|cin"
+    Warning (332126): Node "Add1~69|sumout"
+    Warning (332126): Node "zt~20|datac"
+    Warning (332126): Node "zt~20|combout"
+    Warning (332126): Node "Add4~89|datad"
+    Warning (332126): Node "Add4~89|cout"
+    Warning (332126): Node "Add4~93|cin"
+    Warning (332126): Node "Add4~93|sumout"
+    Warning (332126): Node "Add7~69|datac"
+    Warning (332126): Node "Add7~69|sumout"
+    Warning (332126): Node "yt~17|datac"
+    Warning (332126): Node "yt~17|combout"
+    Warning (332126): Node "Add8~77|datad"
+    Warning (332126): Node "Add8~77|sumout"
+    Warning (332126): Node "Add8~77|datac"
+    Warning (332126): Node "Add1~69|datac"
+    Warning (332126): Node "Add1~69|cout"
+    Warning (332126): Node "Add1~73|cin"
+    Warning (332126): Node "Add1~73|cout"
+    Warning (332126): Node "Add1~77|cin"
+    Warning (332126): Node "Add1~77|cout"
+    Warning (332126): Node "Add1~101|cin"
+    Warning (332126): Node "Add1~101|sumout"
+    Warning (332126): Node "zt~28|datac"
+    Warning (332126): Node "zt~28|combout"
+    Warning (332126): Node "Add4~101|datad"
+    Warning (332126): Node "Add4~101|cout"
+    Warning (332126): Node "Add4~105|cin"
+    Warning (332126): Node "Add4~105|cout"
+    Warning (332126): Node "Add4~109|cin"
+    Warning (332126): Node "Add4~109|cout"
+    Warning (332126): Node "Add4~113|cin"
+    Warning (332126): Node "Add4~113|sumout"
+    Warning (332126): Node "Add7~89|datac"
+    Warning (332126): Node "Add7~89|cout"
+    Warning (332126): Node "Add7~117|cin"
+    Warning (332126): Node "Add7~117|sumout"
+    Warning (332126): Node "yt~29|datac"
+    Warning (332126): Node "yt~29|combout"
+    Warning (332126): Node "Add8~101|datad"
+    Warning (332126): Node "Add8~101|sumout"
+    Warning (332126): Node "Add8~101|datac"
+    Warning (332126): Node "Add1~85|datac"
+    Warning (332126): Node "Add1~85|cout"
+    Warning (332126): Node "Add1~109|cin"
+    Warning (332126): Node "Add1~109|cout"
+    Warning (332126): Node "Add1~89|cin"
+    Warning (332126): Node "Add1~89|sumout"
+    Warning (332126): Node "zt~25|datac"
+    Warning (332126): Node "zt~25|combout"
+    Warning (332126): Node "Add4~121|datac"
+    Warning (332126): Node "Add4~121|sumout"
+    Warning (332126): Node "Add4~121|dataa"
+    Warning (332126): Node "Add6~129|datac"
+    Warning (332126): Node "Add6~129|sumout"
+    Warning (332126): Node "yt~31|datae"
+    Warning (332126): Node "yt~31|combout"
+    Warning (332126): Node "Add8~125|datac"
+    Warning (332126): Node "Add8~125|sumout"
+    Warning (332126): Node "z~93|dataf"
+    Warning (332126): Node "z~93|combout"
+    Warning (332126): Node "Add2~101|datac"
+    Warning (332126): Node "Add2~101|sumout"
+    Warning (332126): Node "zt~25|dataf"
+    Warning (332126): Node "Add8~125|datad"
+    Warning (332126): Node "Add3~117|datad"
+    Warning (332126): Node "Add3~117|sumout"
+    Warning (332126): Node "zt~28|datad"
+    Warning (332126): Node "Add3~117|cout"
+    Warning (332126): Node "Add3~121|cin"
+    Warning (332126): Node "Add3~121|sumout"
+    Warning (332126): Node "zt~29|datac"
+    Warning (332126): Node "zt~29|combout"
+    Warning (332126): Node "Add4~105|datad"
+    Warning (332126): Node "Add4~105|sumout"
+    Warning (332126): Node "Add4~105|datac"
+    Warning (332126): Node "Add5~136|datad"
+    Warning (332126): Node "Add5~136|sumout"
+    Warning (332126): Node "yt~31|dataf"
+    Warning (332126): Node "Add6~125|datac"
+    Warning (332126): Node "Add6~125|sumout"
+    Warning (332126): Node "yt~30|datad"
+    Warning (332126): Node "yt~30|combout"
+    Warning (332126): Node "Add8~109|datad"
+    Warning (332126): Node "Add8~109|cout"
+    Warning (332126): Node "Add8~113|cin"
+    Warning (332126): Node "Add8~113|cout"
+    Warning (332126): Node "Add8~117|cin"
+    Warning (332126): Node "Add8~117|sumout"
+    Warning (332126): Node "Add3~85|datac"
+    Warning (332126): Node "Add3~85|sumout"
+    Warning (332126): Node "zt~21|datad"
+    Warning (332126): Node "Add3~85|cout"
+    Warning (332126): Node "Add3~89|cin"
+    Warning (332126): Node "Add3~89|cout"
+    Warning (332126): Node "Add3~117|cin"
+    Warning (332126): Node "Add3~89|sumout"
+    Warning (332126): Node "zt~22|datac"
+    Warning (332126): Node "zt~22|combout"
+    Warning (332126): Node "Add4~97|datad"
+    Warning (332126): Node "Add4~97|sumout"
+    Warning (332126): Node "Add4~97|datac"
+    Warning (332126): Node "Add5~112|datac"
+    Warning (332126): Node "Add5~112|sumout"
+    Warning (332126): Node "yt~25|dataf"
+    Warning (332126): Node "yt~25|combout"
+    Warning (332126): Node "Add8~117|datad"
+    Warning (332126): Node "Add8~117|cout"
+    Warning (332126): Node "Add8~121|cin"
+    Warning (332126): Node "Add8~121|cout"
+    Warning (332126): Node "Add8~125|cin"
+    Warning (332126): Node "Add8~121|sumout"
+    Warning (332126): Node "Add8~121|dataa"
+    Warning (332126): Node "Add2~125|datac"
+    Warning (332126): Node "Add2~125|cout"
+    Warning (332126): Node "Add2~101|cin"
+    Warning (332126): Node "Add2~125|sumout"
+    Warning (332126): Node "zt~30|datad"
+    Warning (332126): Node "zt~30|combout"
+    Warning (332126): Node "Add4~117|datad"
+    Warning (332126): Node "Add4~117|cout"
+    Warning (332126): Node "Add4~121|cin"
+    Warning (332126): Node "Add4~117|sumout"
+    Warning (332126): Node "Add7~117|datac"
+    Warning (332126): Node "Add7~117|cout"
+    Warning (332126): Node "Add7~93|cin"
+    Warning (332126): Node "Add7~93|cout"
+    Warning (332126): Node "Add7~121|cin"
+    Warning (332126): Node "Add7~121|sumout"
+    Warning (332126): Node "yt~30|datac"
+    Warning (332126): Node "Add7~121|cout"
+    Warning (332126): Node "Add7~97|cin"
+    Warning (332126): Node "Add7~97|cout"
+    Warning (332126): Node "Add7~101|cin"
+    Warning (332126): Node "Add7~101|sumout"
+    Warning (332126): Node "yt~25|datac"
+    Warning (332126): Node "Add7~101|cout"
+    Warning (332126): Node "Add7~105|cin"
+    Warning (332126): Node "Add7~105|cout"
+    Warning (332126): Node "Add7~125|cin"
+    Warning (332126): Node "Add7~125|sumout"
+    Warning (332126): Node "yt~31|datac"
+    Warning (332126): Node "Add7~105|sumout"
+    Warning (332126): Node "yt~26|dataf"
+    Warning (332126): Node "yt~26|combout"
+    Warning (332126): Node "Add8~121|datac"
+    Warning (332126): Node "Add7~97|sumout"
+    Warning (332126): Node "yt~24|datac"
+    Warning (332126): Node "yt~24|combout"
+    Warning (332126): Node "Add8~113|datab"
+    Warning (332126): Node "Add8~113|sumout"
+    Warning (332126): Node "Add2~93|datac"
+    Warning (332126): Node "Add2~93|cout"
+    Warning (332126): Node "Add2~97|cin"
+    Warning (332126): Node "Add2~97|cout"
+    Warning (332126): Node "Add2~125|cin"
+    Warning (332126): Node "Add2~97|sumout"
+    Warning (332126): Node "zt~24|datad"
+    Warning (332126): Node "zt~24|combout"
+    Warning (332126): Node "Add4~113|datad"
+    Warning (332126): Node "Add4~113|cout"
+    Warning (332126): Node "Add4~117|cin"
+    Warning (332126): Node "Add2~93|sumout"
+    Warning (332126): Node "zt~23|dataf"
+    Warning (332126): Node "zt~23|combout"
+    Warning (332126): Node "Add4~109|datad"
+    Warning (332126): Node "Add4~109|sumout"
+    Warning (332126): Node "Add4~109|datac"
+    Warning (332126): Node "Add6~101|datac"
+    Warning (332126): Node "Add6~101|cout"
+    Warning (332126): Node "Add6~105|cin"
+    Warning (332126): Node "Add6~105|sumout"
+    Warning (332126): Node "yt~25|datad"
+    Warning (332126): Node "Add6~105|cout"
+    Warning (332126): Node "Add6~109|cin"
+    Warning (332126): Node "Add6~109|cout"
+    Warning (332126): Node "Add6~129|cin"
+    Warning (332126): Node "Add6~109|sumout"
+    Warning (332126): Node "yt~26|datac"
+    Warning (332126): Node "Add6~101|sumout"
+    Warning (332126): Node "yt~24|dataf"
+    Warning (332126): Node "Add7~85|datac"
+    Warning (332126): Node "Add7~85|sumout"
+    Warning (332126): Node "yt~21|datac"
+    Warning (332126): Node "yt~21|combout"
+    Warning (332126): Node "Add8~93|dataf"
+    Warning (332126): Node "Add8~93|cout"
+    Warning (332126): Node "Add8~97|cin"
+    Warning (332126): Node "Add8~93|sumout"
+    Warning (332126): Node "Add3~65|datac"
+    Warning (332126): Node "Add3~65|sumout"
+    Warning (332126): Node "zt~16|datac"
+    Warning (332126): Node "zt~16|combout"
+    Warning (332126): Node "Add4~69|datad"
+    Warning (332126): Node "Add4~69|sumout"
+    Warning (332126): Node "Add4~69|datac"
+    Warning (332126): Node "Add5~92|datac"
+    Warning (332126): Node "Add5~92|sumout"
+    Warning (332126): Node "yt~20|datae"
+    Warning (332126): Node "yt~20|combout"
+    Warning (332126): Node "Add8~89|datad"
+    Warning (332126): Node "Add8~89|sumout"
+    Warning (332126): Node "Add8~89|datac"
+    Warning (332126): Node "Add8~89|cout"
+    Warning (332126): Node "Add8~93|cin"
+    Warning (332126): Node "Add1~101|datac"
+    Warning (332126): Node "Add1~101|cout"
+    Warning (332126): Node "Add1~105|cin"
+    Warning (332126): Node "Add1~105|cout"
+    Warning (332126): Node "Add1~81|cin"
+    Warning (332126): Node "Add1~81|sumout"
+    Warning (332126): Node "zt~23|datab"
+    Warning (332126): Node "Add1~81|cout"
+    Warning (332126): Node "Add1~85|cin"
+    Warning (332126): Node "Add1~85|sumout"
+    Warning (332126): Node "zt~24|datac"
+    Warning (332126): Node "Add1~105|sumout"
+    Warning (332126): Node "zt~29|dataf"
+    Warning (332126): Node "Add2~77|datac"
+    Warning (332126): Node "Add2~77|sumout"
+    Warning (332126): Node "zt~19|dataf"
+    Warning (332126): Node "Add2~77|cout"
+    Warning (332126): Node "Add2~81|cin"
+    Warning (332126): Node "Add2~81|sumout"
+    Warning (332126): Node "zt~20|datae"
+    Warning (332126): Node "Add2~81|cout"
+    Warning (332126): Node "Add2~85|cin"
+    Warning (332126): Node "Add2~85|cout"
+    Warning (332126): Node "Add2~89|cin"
+    Warning (332126): Node "Add2~89|cout"
+    Warning (332126): Node "Add2~117|cin"
+    Warning (332126): Node "Add2~117|sumout"
+    Warning (332126): Node "zt~28|dataf"
+    Warning (332126): Node "Add2~117|cout"
+    Warning (332126): Node "Add2~121|cin"
+    Warning (332126): Node "Add2~121|cout"
+    Warning (332126): Node "Add2~93|cin"
+    Warning (332126): Node "Add2~121|sumout"
+    Warning (332126): Node "zt~29|datae"
+    Warning (332126): Node "Add2~89|sumout"
+    Warning (332126): Node "zt~22|datae"
+    Warning (332126): Node "Add2~85|sumout"
+    Warning (332126): Node "zt~21|dataf"
+    Warning (332126): Node "Add3~61|datac"
+    Warning (332126): Node "Add3~61|sumout"
+    Warning (332126): Node "zt~15|dataf"
+    Warning (332126): Node "zt~15|combout"
+    Warning (332126): Node "Add4~65|datad"
+    Warning (332126): Node "Add4~65|sumout"
+    Warning (332126): Node "Add7~45|datac"
+    Warning (332126): Node "Add7~45|sumout"
+    Warning (332126): Node "yt~11|datad"
+    Warning (332126): Node "yt~11|combout"
+    Warning (332126): Node "Add8~49|datad"
+    Warning (332126): Node "Add8~49|sumout"
+    Warning (332126): Node "Add8~49|datac"
+    Warning (332126): Node "Add2~41|datac"
+    Warning (332126): Node "Add2~41|sumout"
+    Warning (332126): Node "zt~10|datae"
+    Warning (332126): Node "Add2~41|cout"
+    Warning (332126): Node "Add2~45|cin"
+    Warning (332126): Node "Add2~45|sumout"
+    Warning (332126): Node "zt~11|datae"
+    Warning (332126): Node "zt~11|combout"
+    Warning (332126): Node "Add4~49|datad"
+    Warning (332126): Node "Add4~49|sumout"
+    Warning (332126): Node "Add4~49|datac"
+    Warning (332126): Node "Add5~72|datad"
+    Warning (332126): Node "Add5~72|cout"
+    Warning (332126): Node "Add5~76|cin"
+    Warning (332126): Node "Add5~76|sumout"
+    Warning (332126): Node "yt~16|datae"
+    Warning (332126): Node "Add5~76|cout"
+    Warning (332126): Node "Add5~80|cin"
+    Warning (332126): Node "Add5~80|cout"
+    Warning (332126): Node "Add5~84|cin"
+    Warning (332126): Node "Add5~84|cout"
+    Warning (332126): Node "Add5~88|cin"
+    Warning (332126): Node "Add5~88|cout"
+    Warning (332126): Node "Add5~92|cin"
+    Warning (332126): Node "Add5~92|cout"
+    Warning (332126): Node "Add5~96|cin"
+    Warning (332126): Node "Add5~96|cout"
+    Warning (332126): Node "Add5~100|cin"
+    Warning (332126): Node "Add5~100|sumout"
+    Warning (332126): Node "yt~22|datae"
+    Warning (332126): Node "Add5~100|cout"
+    Warning (332126): Node "Add5~128|cin"
+    Warning (332126): Node "Add5~128|sumout"
+    Warning (332126): Node "yt~29|datad"
+    Warning (332126): Node "Add5~128|cout"
+    Warning (332126): Node "Add5~104|cin"
+    Warning (332126): Node "Add5~104|sumout"
+    Warning (332126): Node "yt~23|datac"
+    Warning (332126): Node "yt~23|combout"
+    Warning (332126): Node "Add8~105|datad"
+    Warning (332126): Node "Add8~105|sumout"
+    Warning (332126): Node "Add8~105|datac"
+    Warning (332126): Node "Add1~109|datac"
+    Warning (332126): Node "Add1~109|sumout"
+    Warning (332126): Node "zt~30|datae"
+    Warning (332126): Node "Add2~117|datac"
+    Warning (332126): Node "Add3~73|datac"
+    Warning (332126): Node "Add3~73|sumout"
+    Warning (332126): Node "zt~18|datac"
+    Warning (332126): Node "zt~18|combout"
+    Warning (332126): Node "Add4~81|datad"
+    Warning (332126): Node "Add4~81|cout"
+    Warning (332126): Node "Add4~85|cin"
+    Warning (332126): Node "Add3~73|cout"
+    Warning (332126): Node "Add3~77|cin"
+    Warning (332126): Node "Add3~77|cout"
+    Warning (332126): Node "Add3~81|cin"
+    Warning (332126): Node "Add3~81|cout"
+    Warning (332126): Node "Add3~85|cin"
+    Warning (332126): Node "Add3~81|sumout"
+    Warning (332126): Node "zt~20|dataf"
+    Warning (332126): Node "Add5~104|cout"
+    Warning (332126): Node "Add5~132|cin"
+    Warning (332126): Node "Add5~132|cout"
+    Warning (332126): Node "Add5~108|cin"
+    Warning (332126): Node "Add5~108|cout"
+    Warning (332126): Node "Add5~112|cin"
+    Warning (332126): Node "Add5~112|cout"
+    Warning (332126): Node "Add5~116|cin"
+    Warning (332126): Node "Add5~116|cout"
+    Warning (332126): Node "Add5~136|cin"
+    Warning (332126): Node "Add5~116|sumout"
+    Warning (332126): Node "yt~26|datad"
+    Warning (332126): Node "Add5~108|sumout"
+    Warning (332126): Node "yt~24|datad"
+    Warning (332126): Node "Add5~132|sumout"
+    Warning (332126): Node "yt~30|dataf"
+    Warning (332126): Node "Add5~96|sumout"
+    Warning (332126): Node "yt~21|dataf"
+    Warning (332126): Node "Add5~88|sumout"
+    Warning (332126): Node "yt~19|dataf"
+    Warning (332126): Node "yt~19|combout"
+    Warning (332126): Node "Add8~85|datad"
+    Warning (332126): Node "Add8~85|cout"
+    Warning (332126): Node "Add8~89|cin"
+    Warning (332126): Node "Add5~80|sumout"
+    Warning (332126): Node "yt~17|dataf"
+    Warning (332126): Node "Add6~53|datad"
+    Warning (332126): Node "Add6~53|cout"
+    Warning (332126): Node "Add6~57|cin"
+    Warning (332126): Node "Add6~57|sumout"
+    Warning (332126): Node "yt~13|dataf"
+    Warning (332126): Node "Add6~57|cout"
+    Warning (332126): Node "Add6~117|cin"
+    Warning (332126): Node "Add6~117|sumout"
+    Warning (332126): Node "yt~28|dataf"
+    Warning (332126): Node "yt~28|combout"
+    Warning (332126): Node "Add8~61|datad"
+    Warning (332126): Node "Add8~61|cout"
+    Warning (332126): Node "Add8~65|cin"
+    Warning (332126): Node "Add6~117|cout"
+    Warning (332126): Node "Add6~61|cin"
+    Warning (332126): Node "Add6~61|cout"
+    Warning (332126): Node "Add6~65|cin"
+    Warning (332126): Node "Add6~65|sumout"
+    Warning (332126): Node "yt~15|datae"
+    Warning (332126): Node "Add6~65|cout"
+    Warning (332126): Node "Add6~69|cin"
+    Warning (332126): Node "Add6~69|cout"
+    Warning (332126): Node "Add6~73|cin"
+    Warning (332126): Node "Add6~73|cout"
+    Warning (332126): Node "Add6~77|cin"
+    Warning (332126): Node "Add6~77|sumout"
+    Warning (332126): Node "yt~18|datae"
+    Warning (332126): Node "Add6~77|cout"
+    Warning (332126): Node "Add6~81|cin"
+    Warning (332126): Node "Add6~81|cout"
+    Warning (332126): Node "Add6~85|cin"
+    Warning (332126): Node "Add6~85|sumout"
+    Warning (332126): Node "yt~20|datad"
+    Warning (332126): Node "Add6~85|cout"
+    Warning (332126): Node "Add6~89|cin"
+    Warning (332126): Node "Add6~89|sumout"
+    Warning (332126): Node "yt~21|datad"
+    Warning (332126): Node "Add6~89|cout"
+    Warning (332126): Node "Add6~93|cin"
+    Warning (332126): Node "Add6~93|cout"
+    Warning (332126): Node "Add6~121|cin"
+    Warning (332126): Node "Add6~121|cout"
+    Warning (332126): Node "Add6~97|cin"
+    Warning (332126): Node "Add6~97|sumout"
+    Warning (332126): Node "yt~23|datae"
+    Warning (332126): Node "Add6~97|cout"
+    Warning (332126): Node "Add6~125|cin"
+    Warning (332126): Node "Add6~125|cout"
+    Warning (332126): Node "Add6~101|cin"
+    Warning (332126): Node "Add6~121|sumout"
+    Warning (332126): Node "yt~29|dataf"
+    Warning (332126): Node "Add6~93|sumout"
+    Warning (332126): Node "yt~22|dataf"
+    Warning (332126): Node "Add6~81|sumout"
+    Warning (332126): Node "yt~19|datae"
+    Warning (332126): Node "Add6~73|sumout"
+    Warning (332126): Node "yt~17|datad"
+    Warning (332126): Node "Add6~69|sumout"
+    Warning (332126): Node "yt~16|dataf"
+    Warning (332126): Node "Add6~61|sumout"
+    Warning (332126): Node "yt~14|datae"
+    Warning (332126): Node "Add6~53|sumout"
+    Warning (332126): Node "yt~12|datae"
+    Warning (332126): Node "yt~12|combout"
+    Warning (332126): Node "Add8~53|datad"
+    Warning (332126): Node "Add8~53|sumout"
+    Warning (332126): Node "Add8~53|datac"
+    Warning (332126): Node "Add1~49|datac"
+    Warning (332126): Node "Add1~49|sumout"
+    Warning (332126): Node "zt~15|datae"
+    Warning (332126): Node "Add1~49|cout"
+    Warning (332126): Node "Add1~53|cin"
+    Warning (332126): Node "Add1~53|cout"
+    Warning (332126): Node "Add1~57|cin"
+    Warning (332126): Node "Add1~57|cout"
+    Warning (332126): Node "Add1~97|cin"
+    Warning (332126): Node "Add1~97|sumout"
+    Warning (332126): Node "zt~27|datac"
+    Warning (332126): Node "zt~27|combout"
+    Warning (332126): Node "Add4~77|datad"
+    Warning (332126): Node "Add4~77|sumout"
+    Warning (332126): Node "Add4~77|datac"
+    Warning (332126): Node "Add5~100|datac"
+    Warning (332126): Node "Add6~77|datac"
+    Warning (332126): Node "Add7~113|datac"
+    Warning (332126): Node "Add7~113|sumout"
+    Warning (332126): Node "yt~28|datac"
+    Warning (332126): Node "Add7~113|cout"
+    Warning (332126): Node "Add7~57|cin"
+    Warning (332126): Node "Add7~57|cout"
+    Warning (332126): Node "Add7~61|cin"
+    Warning (332126): Node "Add7~61|cout"
+    Warning (332126): Node "Add7~65|cin"
+    Warning (332126): Node "Add7~65|cout"
+    Warning (332126): Node "Add7~69|cin"
+    Warning (332126): Node "Add7~69|cout"
+    Warning (332126): Node "Add7~73|cin"
+    Warning (332126): Node "Add7~73|cout"
+    Warning (332126): Node "Add7~77|cin"
+    Warning (332126): Node "Add7~77|sumout"
+    Warning (332126): Node "yt~19|datac"
+    Warning (332126): Node "Add7~73|sumout"
+    Warning (332126): Node "yt~18|dataf"
+    Warning (332126): Node "Add7~61|sumout"
+    Warning (332126): Node "yt~15|dataf"
+    Warning (332126): Node "Add1~97|cout"
+    Warning (332126): Node "Add1~61|cin"
+    Warning (332126): Node "Add1~61|cout"
+    Warning (332126): Node "Add1~65|cin"
+    Warning (332126): Node "Add1~61|sumout"
+    Warning (332126): Node "zt~18|datae"
+    Warning (332126): Node "Add1~57|sumout"
+    Warning (332126): Node "zt~17|datae"
+    Warning (332126): Node "zt~17|combout"
+    Warning (332126): Node "Add4~73|datad"
+    Warning (332126): Node "Add4~73|sumout"
+    Warning (332126): Node "Add4~73|datac"
+    Warning (332126): Node "Add5~96|datac"
+    Warning (332126): Node "Add7~53|datad"
+    Warning (332126): Node "Add7~53|sumout"
+    Warning (332126): Node "yt~13|datae"
+    Warning (332126): Node "Add7~53|cout"
+    Warning (332126): Node "Add7~113|cin"
+    Warning (332126): Node "Add6~73|datad"
+    Warning (332126): Node "Add1~53|sumout"
+    Warning (332126): Node "zt~16|dataf"
+    Warning (332126): Node "Add2~45|dataa"
+    Warning (332126): Node "Add2~45|cout"
+    Warning (332126): Node "Add2~49|cin"
+    Warning (332126): Node "Add2~49|sumout"
+    Warning (332126): Node "zt~12|datac"
+    Warning (332126): Node "zt~12|combout"
+    Warning (332126): Node "Add4~53|datad"
+    Warning (332126): Node "Add4~53|sumout"
+    Warning (332126): Node "Add4~53|datac"
+    Warning (332126): Node "Add5~76|datac"
+    Warning (332126): Node "Add6~57|datac"
+    Warning (332126): Node "Add7~33|dataa"
+    Warning (332126): Node "Add7~33|sumout"
+    Warning (332126): Node "yt~8|dataf"
+    Warning (332126): Node "yt~8|combout"
+    Warning (332126): Node "Add8~37|datad"
+    Warning (332126): Node "Add2~49|cout"
+    Warning (332126): Node "Add2~53|cin"
+    Warning (332126): Node "Add2~53|sumout"
+    Warning (332126): Node "zt~13|datad"
+    Warning (332126): Node "zt~13|combout"
+    Warning (332126): Node "Add4~57|datad"
+    Warning (332126): Node "Add4~57|sumout"
+    Warning (332126): Node "Add4~57|datac"
+    Warning (332126): Node "Add5~80|datac"
+    Warning (332126): Node "Add6~117|datac"
+    Warning (332126): Node "Add7~37|datac"
+    Warning (332126): Node "Add7~37|sumout"
+    Warning (332126): Node "yt~9|datae"
+    Warning (332126): Node "yt~9|combout"
+    Warning (332126): Node "Add8~41|dataf"
+    Warning (332126): Node "Add8~41|cout"
+    Warning (332126): Node "Add8~45|cin"
+    Warning (332126): Node "Add8~45|sumout"
+    Warning (332126): Node "Add3~21|datac"
+    Warning (332126): Node "Add3~21|sumout"
+    Warning (332126): Node "zt~5|datad"
+    Warning (332126): Node "zt~5|combout"
+    Warning (332126): Node "Add4~21|datad"
+    Warning (332126): Node "Add4~21|sumout"
+    Warning (332126): Node "Add4~21|datac"
+    Warning (332126): Node "Add5~48|datac"
+    Warning (332126): Node "Add5~48|sumout"
+    Warning (332126): Node "yt~9|datad"
+    Warning (332126): Node "Add5~48|cout"
+    Warning (332126): Node "Add5~52|cin"
+    Warning (332126): Node "Add5~52|sumout"
+    Warning (332126): Node "yt~10|dataf"
+    Warning (332126): Node "Add5~52|cout"
+    Warning (332126): Node "Add5~56|cin"
+    Warning (332126): Node "Add5~56|sumout"
+    Warning (332126): Node "yt~11|datae"
+    Warning (332126): Node "Add5~56|cout"
+    Warning (332126): Node "Add5~60|cin"
+    Warning (332126): Node "Add5~60|cout"
+    Warning (332126): Node "Add5~64|cin"
+    Warning (332126): Node "Add5~64|cout"
+    Warning (332126): Node "Add5~124|cin"
+    Warning (332126): Node "Add5~124|sumout"
+    Warning (332126): Node "yt~28|datad"
+    Warning (332126): Node "Add5~124|cout"
+    Warning (332126): Node "Add5~68|cin"
+    Warning (332126): Node "Add5~68|sumout"
+    Warning (332126): Node "yt~14|dataf"
+    Warning (332126): Node "Add5~60|sumout"
+    Warning (332126): Node "yt~12|dataf"
+    Warning (332126): Node "Add6~25|datad"
+    Warning (332126): Node "Add6~25|sumout"
+    Warning (332126): Node "yt~5|dataf"
+    Warning (332126): Node "Add6~25|cout"
+    Warning (332126): Node "Add6~29|cin"
+    Warning (332126): Node "Add6~29|sumout"
+    Warning (332126): Node "yt~6|datae"
+    Warning (332126): Node "yt~6|combout"
+    Warning (332126): Node "Add8~29|datad"
+    Warning (332126): Node "Add8~29|sumout"
+    Warning (332126): Node "Add8~29|dataa"
+    Warning (332126): Node "Add1~25|datac"
+    Warning (332126): Node "Add1~25|sumout"
+    Warning (332126): Node "zt~9|datac"
+    Warning (332126): Node "Add1~25|cout"
+    Warning (332126): Node "Add1~29|cin"
+    Warning (332126): Node "Add1~29|cout"
+    Warning (332126): Node "Add1~33|cin"
+    Warning (332126): Node "Add1~33|sumout"
+    Warning (332126): Node "zt~11|datac"
+    Warning (332126): Node "Add1~33|cout"
+    Warning (332126): Node "Add1~37|cin"
+    Warning (332126): Node "Add1~37|cout"
+    Warning (332126): Node "Add1~41|cin"
+    Warning (332126): Node "Add1~41|sumout"
+    Warning (332126): Node "zt~13|datae"
+    Warning (332126): Node "Add1~41|cout"
+    Warning (332126): Node "Add1~45|cin"
+    Warning (332126): Node "Add1~45|cout"
+    Warning (332126): Node "Add1~49|cin"
+    Warning (332126): Node "Add1~45|sumout"
+    Warning (332126): Node "zt~14|dataf"
+    Warning (332126): Node "Add1~37|sumout"
+    Warning (332126): Node "zt~12|dataf"
+    Warning (332126): Node "Add1~29|sumout"
+    Warning (332126): Node "zt~10|dataf"
+    Warning (332126): Node "Add2~25|datac"
+    Warning (332126): Node "Add2~25|sumout"
+    Warning (332126): Node "zt~6|datae"
+    Warning (332126): Node "zt~6|combout"
+    Warning (332126): Node "Add4~25|datac"
+    Warning (332126): Node "Add4~25|sumout"
+    Warning (332126): Node "Add4~25|datab"
+    Warning (332126): Node "Add5~52|datad"
+    Warning (332126): Node "Add6~29|datac"
+    Warning (332126): Node "Add6~29|cout"
+    Warning (332126): Node "Add6~33|cin"
+    Warning (332126): Node "Add6~33|sumout"
+    Warning (332126): Node "yt~7|datad"
+    Warning (332126): Node "yt~7|combout"
+    Warning (332126): Node "Add8~33|datad"
+    Warning (332126): Node "Add8~33|sumout"
+    Warning (332126): Node "Add8~33|datac"
+    Warning (332126): Node "Add1~29|datac"
+    Warning (332126): Node "Add2~29|datab"
+    Warning (332126): Node "Add2~29|cout"
+    Warning (332126): Node "Add2~33|cin"
+    Warning (332126): Node "Add2~33|cout"
+    Warning (332126): Node "Add2~109|cin"
+    Warning (332126): Node "Add2~109|sumout"
+    Warning (332126): Node "zt~26|datac"
+    Warning (332126): Node "Add2~109|cout"
+    Warning (332126): Node "Add2~37|cin"
+    Warning (332126): Node "Add2~37|sumout"
+    Warning (332126): Node "zt~9|datae"
+    Warning (332126): Node "Add2~37|cout"
+    Warning (332126): Node "Add2~41|cin"
+    Warning (332126): Node "Add2~33|sumout"
+    Warning (332126): Node "zt~8|datae"
+    Warning (332126): Node "Add2~29|sumout"
+    Warning (332126): Node "zt~7|dataf"
+    Warning (332126): Node "zt~7|combout"
+    Warning (332126): Node "Add4~29|datad"
+    Warning (332126): Node "Add4~29|sumout"
+    Warning (332126): Node "Add4~29|datac"
+    Warning (332126): Node "Add5~56|datac"
+    Warning (332126): Node "Add6~33|datad"
+    Warning (332126): Node "Add6~33|cout"
+    Warning (332126): Node "Add6~37|cin"
+    Warning (332126): Node "Add6~37|sumout"
+    Warning (332126): Node "yt~8|datac"
+    Warning (332126): Node "Add6~37|cout"
+    Warning (332126): Node "Add6~41|cin"
+    Warning (332126): Node "Add6~41|cout"
+    Warning (332126): Node "Add6~45|cin"
+    Warning (332126): Node "Add6~45|sumout"
+    Warning (332126): Node "yt~10|datac"
+    Warning (332126): Node "Add6~45|cout"
+    Warning (332126): Node "Add6~49|cin"
+    Warning (332126): Node "Add6~49|cout"
+    Warning (332126): Node "Add6~53|cin"
+    Warning (332126): Node "Add6~49|sumout"
+    Warning (332126): Node "yt~11|dataf"
+    Warning (332126): Node "Add6~41|sumout"
+    Warning (332126): Node "yt~9|dataf"
+    Warning (332126): Node "Add7~13|datac"
+    Warning (332126): Node "Add7~13|sumout"
+    Warning (332126): Node "yt~3|datad"
+    Warning (332126): Node "yt~3|combout"
+    Warning (332126): Node "Add8~13|datad"
+    Warning (332126): Node "Add8~13|cout"
+    Warning (332126): Node "Add8~17|cin"
+    Warning (332126): Node "Add8~17|sumout"
+    Warning (332126): Node "Add8~17|datab"
+    Warning (332126): Node "Add8~17|cout"
+    Warning (332126): Node "Add8~21|cin"
+    Warning (332126): Node "Add8~21|cout"
+    Warning (332126): Node "Add8~25|cin"
+    Warning (332126): Node "Add8~21|sumout"
+    Warning (332126): Node "Add8~21|datac"
+    Warning (332126): Node "Add1~21|datac"
+    Warning (332126): Node "Add1~21|cout"
+    Warning (332126): Node "Add1~93|cin"
+    Warning (332126): Node "Add1~93|cout"
+    Warning (332126): Node "Add1~25|cin"
+    Warning (332126): Node "Add1~93|sumout"
+    Warning (332126): Node "zt~26|dataf"
+    Warning (332126): Node "Add1~21|sumout"
+    Warning (332126): Node "zt~8|dataf"
+    Warning (332126): Node "Add2~17|datac"
+    Warning (332126): Node "Add2~17|sumout"
+    Warning (332126): Node "zt~4|dataf"
+    Warning (332126): Node "Add2~17|cout"
+    Warning (332126): Node "Add2~21|cin"
+    Warning (332126): Node "Add2~21|cout"
+    Warning (332126): Node "Add2~25|cin"
+    Warning (332126): Node "Add2~25|cout"
+    Warning (332126): Node "Add2~29|cin"
+    Warning (332126): Node "Add2~21|sumout"
+    Warning (332126): Node "zt~5|dataf"
+    Warning (332126): Node "Add3~105|datac"
+    Warning (332126): Node "Add3~105|sumout"
+    Warning (332126): Node "zt~31|datae"
+    Warning (332126): Node "zt~31|combout"
+    Warning (332126): Node "Add4~125|datac"
+    Warning (332126): Node "Add4~125|cout"
+    Warning (332126): Node "Add4~125|sumout"
+    Warning (332126): Node "Add5~28|datac"
+    Warning (332126): Node "Add5~28|sumout"
+    Warning (332126): Node "yt~4|datae"
+    Warning (332126): Node "yt~4|combout"
+    Warning (332126): Node "Add8~17|datac"
+    Warning (332126): Node "Add5~28|cout"
+    Warning (332126): Node "Add5~120|cin"
+    Warning (332126): Node "Add5~120|sumout"
+    Warning (332126): Node "yt~27|datac"
+    Warning (332126): Node "yt~27|combout"
+    Warning (332126): Node "Add8~21|datad"
+    Warning (332126): Node "Add5~120|cout"
+    Warning (332126): Node "Add5~32|cin"
+    Warning (332126): Node "Add5~32|cout"
+    Warning (332126): Node "Add5~36|cin"
+    Warning (332126): Node "Add5~36|sumout"
+    Warning (332126): Node "yt~6|datac"
+    Warning (332126): Node "Add5~36|cout"
+    Warning (332126): Node "Add5~40|cin"
+    Warning (332126): Node "Add5~40|sumout"
+    Warning (332126): Node "yt~7|datac"
+    Warning (332126): Node "Add5~40|cout"
+    Warning (332126): Node "Add5~44|cin"
+    Warning (332126): Node "Add5~44|sumout"
+    Warning (332126): Node "yt~8|datae"
+    Warning (332126): Node "Add5~44|cout"
+    Warning (332126): Node "Add5~48|cin"
+    Warning (332126): Node "Add6~5|datac"
+    Warning (332126): Node "Add6~5|cout"
+    Warning (332126): Node "Add6~9|cin"
+    Warning (332126): Node "Add6~9|cout"
+    Warning (332126): Node "Add6~13|cin"
+    Warning (332126): Node "Add6~13|sumout"
+    Warning (332126): Node "yt~2|datae"
+    Warning (332126): Node "yt~2|combout"
+    Warning (332126): Node "Add8~9|dataf"
+    Warning (332126): Node "Add8~9|cout"
+    Warning (332126): Node "Add8~13|cin"
+    Warning (332126): Node "Add8~13|sumout"
+    Warning (332126): Node "Add2~9|datac"
+    Warning (332126): Node "Add2~9|cout"
+    Warning (332126): Node "Add2~13|cin"
+    Warning (332126): Node "Add2~13|sumout"
+    Warning (332126): Node "zt~3|dataf"
+    Warning (332126): Node "zt~3|combout"
+    Warning (332126): Node "Add4~13|datad"
+    Warning (332126): Node "Add4~13|cout"
+    Warning (332126): Node "Add4~17|cin"
+    Warning (332126): Node "Add4~13|sumout"
+    Warning (332126): Node "Add6~21|datad"
+    Warning (332126): Node "Add6~21|cout"
+    Warning (332126): Node "Add6~113|cin"
+    Warning (332126): Node "Add6~113|sumout"
+    Warning (332126): Node "yt~27|datad"
+    Warning (332126): Node "Add6~113|cout"
+    Warning (332126): Node "Add6~25|cin"
+    Warning (332126): Node "Add6~21|sumout"
+    Warning (332126): Node "yt~4|datac"
+    Warning (332126): Node "Add4~13|datab"
+    Warning (332126): Node "Add5~40|datac"
+    Warning (332126): Node "Add2~13|cout"
+    Warning (332126): Node "Add2~17|cin"
+    Warning (332126): Node "Add2~9|sumout"
+    Warning (332126): Node "zt~2|datae"
+    Warning (332126): Node "zt~2|combout"
+    Warning (332126): Node "Add4~9|datad"
+    Warning (332126): Node "Add4~9|cout"
+    Warning (332126): Node "Add4~13|cin"
+    Warning (332126): Node "Add4~9|sumout"
+    Warning (332126): Node "Add4~9|datac"
+    Warning (332126): Node "Add5~36|datad"
+    Warning (332126): Node "Add6~17|datad"
+    Warning (332126): Node "Add6~17|sumout"
+    Warning (332126): Node "yt~3|dataf"
+    Warning (332126): Node "Add6~17|cout"
+    Warning (332126): Node "Add6~21|cin"
+    Warning (332126): Node "Add8~13|datac"
+    Warning (332126): Node "Add1~13|datac"
+    Warning (332126): Node "Add1~13|sumout"
+    Warning (332126): Node "zt~6|datad"
+    Warning (332126): Node "Add1~13|cout"
+    Warning (332126): Node "Add1~17|cin"
+    Warning (332126): Node "Add1~17|sumout"
+    Warning (332126): Node "zt~7|datac"
+    Warning (332126): Node "Add1~17|cout"
+    Warning (332126): Node "Add1~21|cin"
+    Warning (332126): Node "Add8~9|sumout"
+    Warning (332126): Node "Add8~9|datac"
+    Warning (332126): Node "Add1~9|datac"
+    Warning (332126): Node "Add1~9|sumout"
+    Warning (332126): Node "zt~5|datac"
+    Warning (332126): Node "Add1~9|cout"
+    Warning (332126): Node "Add1~13|cin"
+    Warning (332126): Node "Add2~5|datac"
+    Warning (332126): Node "Add2~5|sumout"
+    Warning (332126): Node "zt~1|dataf"
+    Warning (332126): Node "zt~1|combout"
+    Warning (332126): Node "Add4~5|datad"
+    Warning (332126): Node "Add4~5|cout"
+    Warning (332126): Node "Add4~9|cin"
+    Warning (332126): Node "Add2~5|cout"
+    Warning (332126): Node "Add2~9|cin"
+    Warning (332126): Node "Add6~13|cout"
+    Warning (332126): Node "Add6~17|cin"
+    Warning (332126): Node "Add6~9|sumout"
+    Warning (332126): Node "yt~1|dataf"
+    Warning (332126): Node "yt~1|combout"
+    Warning (332126): Node "Add8~5|dataf"
+    Warning (332126): Node "Add8~5|sumout"
+    Warning (332126): Node "Add1~5|datac"
+    Warning (332126): Node "Add1~5|sumout"
+    Warning (332126): Node "zt~4|datae"
+    Warning (332126): Node "Add1~5|cout"
+    Warning (332126): Node "Add1~9|cin"
+    Warning (332126): Node "Add8~5|datac"
+    Warning (332126): Node "Add8~5|cout"
+    Warning (332126): Node "Add8~9|cin"
+    Warning (332126): Node "Add2~1|datac"
+    Warning (332126): Node "Add2~1|sumout"
+    Warning (332126): Node "zt~0|datad"
+    Warning (332126): Node "zt~0|combout"
+    Warning (332126): Node "Add4~1|datad"
+    Warning (332126): Node "Add4~1|sumout"
+    Warning (332126): Node "Add4~1|dataa"
+    Warning (332126): Node "Add5~120|datac"
+    Warning (332126): Node "Add6~9|datac"
+    Warning (332126): Node "Add2~1|cout"
+    Warning (332126): Node "Add2~5|cin"
+    Warning (332126): Node "Add6~5|sumout"
+    Warning (332126): Node "yt~0|dataf"
+    Warning (332126): Node "yt~0|combout"
+    Warning (332126): Node "Add8~1|datad"
+    Warning (332126): Node "Add8~1|cout"
+    Warning (332126): Node "Add8~5|cin"
+    Warning (332126): Node "Add8~1|sumout"
+    Warning (332126): Node "Add1~1|datac"
+    Warning (332126): Node "Add1~1|sumout"
+    Warning (332126): Node "zt~3|datae"
+    Warning (332126): Node "Add1~1|cout"
+    Warning (332126): Node "Add1~5|cin"
+    Warning (332126): Node "Add8~1|datab"
+    Warning (332126): Node "Add2~105|datac"
+    Warning (332126): Node "Add2~105|cout"
+    Warning (332126): Node "Add2~1|cin"
+    Warning (332126): Node "Add2~105|sumout"
+    Warning (332126): Node "zt~31|dataf"
+    Warning (332126): Node "y~31|dataf"
+    Warning (332126): Node "y~31|combout"
+    Warning (332126): Node "Add4~125|datad"
+    Warning (332126): Node "Add3~105|cout"
+    Warning (332126): Node "Add3~1|cin"
+    Warning (332126): Node "Add3~1|cout"
+    Warning (332126): Node "Add3~5|cin"
+    Warning (332126): Node "Add3~5|sumout"
+    Warning (332126): Node "zt~1|datae"
+    Warning (332126): Node "Add3~5|cout"
+    Warning (332126): Node "Add3~9|cin"
+    Warning (332126): Node "Add3~9|sumout"
+    Warning (332126): Node "zt~2|dataf"
+    Warning (332126): Node "Add3~9|cout"
+    Warning (332126): Node "Add3~13|cin"
+    Warning (332126): Node "Add3~13|sumout"
+    Warning (332126): Node "zt~3|datac"
+    Warning (332126): Node "Add3~13|cout"
+    Warning (332126): Node "Add3~17|cin"
+    Warning (332126): Node "Add3~17|cout"
+    Warning (332126): Node "Add3~21|cin"
+    Warning (332126): Node "Add3~21|cout"
+    Warning (332126): Node "Add3~25|cin"
+    Warning (332126): Node "Add3~25|cout"
+    Warning (332126): Node "Add3~29|cin"
+    Warning (332126): Node "Add3~29|cout"
+    Warning (332126): Node "Add3~33|cin"
+    Warning (332126): Node "Add3~29|sumout"
+    Warning (332126): Node "zt~7|datad"
+    Warning (332126): Node "Add3~25|sumout"
+    Warning (332126): Node "zt~6|dataf"
+    Warning (332126): Node "Add3~1|sumout"
+    Warning (332126): Node "zt~0|dataf"
+    Warning (332126): Node "Add2~13|datac"
+    Warning (332126): Node "Add1~17|datac"
+    Warning (332126): Node "Add7~13|cout"
+    Warning (332126): Node "Add7~17|cin"
+    Warning (332126): Node "Add7~17|sumout"
+    Warning (332126): Node "yt~4|dataf"
+    Warning (332126): Node "Add7~17|cout"
+    Warning (332126): Node "Add7~109|cin"
+    Warning (332126): Node "Add7~109|cout"
+    Warning (332126): Node "Add7~21|cin"
+    Warning (332126): Node "Add7~109|sumout"
+    Warning (332126): Node "yt~27|dataf"
+    Warning (332126): Node "Add3~9|datac"
+    Warning (332126): Node "Add7~9|datac"
+    Warning (332126): Node "Add7~9|cout"
+    Warning (332126): Node "Add7~13|cin"
+    Warning (332126): Node "Add7~9|sumout"
+    Warning (332126): Node "yt~2|dataf"
+    Warning (332126): Node "Add3~5|datac"
+    Warning (332126): Node "Add7~5|datac"
+    Warning (332126): Node "Add7~5|cout"
+    Warning (332126): Node "Add7~9|cin"
+    Warning (332126): Node "Add7~5|sumout"
+    Warning (332126): Node "yt~1|datae"
+    Warning (332126): Node "Add2~37|dataa"
+    Warning (332126): Node "Add8~45|datac"
+    Warning (332126): Node "Add1~41|datac"
+    Warning (332126): Node "Add2~53|cout"
+    Warning (332126): Node "Add2~57|cin"
+    Warning (332126): Node "Add2~57|cout"
+    Warning (332126): Node "Add2~61|cin"
+    Warning (332126): Node "Add2~61|sumout"
+    Warning (332126): Node "zt~15|datac"
+    Warning (332126): Node "Add2~61|cout"
+    Warning (332126): Node "Add2~65|cin"
+    Warning (332126): Node "Add2~65|cout"
+    Warning (332126): Node "Add2~69|cin"
+    Warning (332126): Node "Add2~69|cout"
+    Warning (332126): Node "Add2~113|cin"
+    Warning (332126): Node "Add2~113|sumout"
+    Warning (332126): Node "zt~27|datae"
+    Warning (332126): Node "Add2~113|cout"
+    Warning (332126): Node "Add2~73|cin"
+    Warning (332126): Node "Add2~73|sumout"
+    Warning (332126): Node "zt~18|dataf"
+    Warning (332126): Node "Add2~73|cout"
+    Warning (332126): Node "Add2~77|cin"
+    Warning (332126): Node "Add2~69|sumout"
+    Warning (332126): Node "zt~17|dataf"
+    Warning (332126): Node "Add2~65|sumout"
+    Warning (332126): Node "zt~16|datae"
+    Warning (332126): Node "Add2~57|sumout"
+    Warning (332126): Node "zt~14|datae"
+    Warning (332126): Node "Add3~29|datac"
+    Warning (332126): Node "Add7~29|datac"
+    Warning (332126): Node "Add7~29|sumout"
+    Warning (332126): Node "yt~7|dataf"
+    Warning (332126): Node "Add1~45|datac"
+    Warning (332126): Node "Add3~25|datac"
+    Warning (332126): Node "Add7~45|cout"
+    Warning (332126): Node "Add7~49|cin"
+    Warning (332126): Node "Add7~49|cout"
+    Warning (332126): Node "Add7~53|cin"
+    Warning (332126): Node "Add7~49|sumout"
+    Warning (332126): Node "yt~12|datac"
+    Warning (332126): Node "Add4~65|dataa"
+    Warning (332126): Node "Add5~88|datac"
+    Warning (332126): Node "Add6~65|datad"
+    Warning (332126): Node "Add3~61|cout"
+    Warning (332126): Node "Add3~65|cin"
+    Warning (332126): Node "Add3~65|cout"
+    Warning (332126): Node "Add3~69|cin"
+    Warning (332126): Node "Add3~69|cout"
+    Warning (332126): Node "Add3~113|cin"
+    Warning (332126): Node "Add3~113|cout"
+    Warning (332126): Node "Add3~73|cin"
+    Warning (332126): Node "Add3~113|sumout"
+    Warning (332126): Node "zt~27|dataf"
+    Warning (332126): Node "Add3~69|sumout"
+    Warning (332126): Node "zt~17|datac"
+    Warning (332126): Node "Add6~69|datac"
+    Warning (332126): Node "Add7~49|datac"
+    Warning (332126): Node "Add8~93|datac"
+    Warning (332126): Node "Add1~105|datac"
+    Warning (332126): Node "Add2~81|datac"
+    Warning (332126): Node "Add8~113|datac"
+    Warning (332126): Node "Add3~81|datac"
+    Warning (332126): Node "Add7~93|sumout"
+    Warning (332126): Node "yt~23|dataf"
+    Warning (332126): Node "Add4~117|datac"
+    Warning (332126): Node "Add6~109|datac"
+    Warning (332126): Node "Add3~89|datac"
+    Warning (332126): Node "Add6~121|datac"
+    Warning (332126): Node "Add7~73|datab"
+    Warning (332126): Node "Add8~117|datac"
+    Warning (332126): Node "Add2~97|datac"
+    Warning (332126): Node "Add7~81|datad"
+    Warning (332126): Node "Add7~81|sumout"
+    Warning (332126): Node "yt~20|dataf"
+    Warning (332126): Node "Add3~121|cout"
+    Warning (332126): Node "Add3~93|cin"
+    Warning (332126): Node "Add3~93|cout"
+    Warning (332126): Node "Add3~97|cin"
+    Warning (332126): Node "Add3~97|cout"
+    Warning (332126): Node "Add3~125|cin"
+    Warning (332126): Node "Add3~125|cout"
+    Warning (332126): Node "Add3~101|cin"
+    Warning (332126): Node "Add3~101|sumout"
+    Warning (332126): Node "zt~25|datad"
+    Warning (332126): Node "Add3~125|sumout"
+    Warning (332126): Node "zt~30|dataf"
+    Warning (332126): Node "Add3~97|sumout"
+    Warning (332126): Node "zt~24|dataf"
+    Warning (332126): Node "Add3~93|sumout"
+    Warning (332126): Node "zt~23|datad"
+    Warning (332126): Node "Add7~93|datad"
+    Warning (332126): Node "Add2~89|datac"
+    Warning (332126): Node "Add3~113|datac"
+    Warning (332126): Node "Add4~113|datac"
+    Warning (332126): Node "Add6~105|datad"
+    Warning (332126): Node "Add1~77|sumout"
+    Warning (332126): Node "zt~22|dataf"
+    Warning (332126): Node "Add2~69|datac"
+    Warning (332126): Node "Add3~49|datac"
+    Warning (332126): Node "Add3~49|sumout"
+    Warning (332126): Node "zt~12|datad"
+    Warning (332126): Node "Add3~49|cout"
+    Warning (332126): Node "Add3~53|cin"
+    Warning (332126): Node "Add3~53|cout"
+    Warning (332126): Node "Add3~57|cin"
+    Warning (332126): Node "Add3~57|cout"
+    Warning (332126): Node "Add3~61|cin"
+    Warning (332126): Node "Add3~53|sumout"
+    Warning (332126): Node "zt~13|dataf"
+    Warning (332126): Node "Add4~93|datab"
+    Warning (332126): Node "Add5~108|datad"
+    Warning (332126): Node "Add6~93|datac"
+    Warning (332126): Node "Add2~65|datac"
+    Warning (332126): Node "Add3~45|datac"
+    Warning (332126): Node "Add3~45|sumout"
+    Warning (332126): Node "zt~11|dataf"
+    Warning (332126): Node "Add3~45|cout"
+    Warning (332126): Node "Add3~49|cin"
+    Warning (332126): Node "Add4~89|datac"
+    Warning (332126): Node "Add5~132|datad"
+    Warning (332126): Node "Add6~89|datad"
+    Warning (332126): Node "Add5~104|datac"
+    Warning (332126): Node "Add6~85|datad"
+    Warning (332126): Node "Add7~61|datac"
+    Warning (332126): Node "Add8~109|datac"
+    Warning (332126): Node "Add1~89|datac"
+    Warning (332126): Node "Add2~121|datac"
+    Warning (332126): Node "Add1~81|datac"
+    Warning (332126): Node "Add2~85|datab"
+    Warning (332126): Node "Add3~69|datac"
+    Warning (332126): Node "Add4~101|datac"
+    Warning (332126): Node "Add5~116|datac"
+    Warning (332126): Node "Add6~97|datad"
+    Warning (332126): Node "Add2~113|datac"
+    Warning (332126): Node "Add3~53|datac"
+    Warning (332126): Node "Add7~41|datac"
+    Warning (332126): Node "Add7~41|cout"
+    Warning (332126): Node "Add7~45|cin"
+    Warning (332126): Node "Add6~61|datac"
+    Warning (332126): Node "Add8~85|datac"
+    Warning (332126): Node "Add1~77|datac"
+    Warning (332126): Node "Add2~73|datac"
+    Warning (332126): Node "Add6~49|datac"
+    Warning (332126): Node "Add7~25|datac"
+    Warning (332126): Node "Add7~25|sumout"
+    Warning (332126): Node "yt~6|dataf"
+    Warning (332126): Node "Add3~41|cout"
+    Warning (332126): Node "Add3~45|cin"
+    Warning (332126): Node "Add8~69|datac"
+    Warning (332126): Node "Add1~61|datac"
+    Warning (332126): Node "Add2~61|datac"
+    Warning (332126): Node "Add1~97|datac"
+    Warning (332126): Node "Add2~57|datac"
+    Warning (332126): Node "Add3~37|datac"
+    Warning (332126): Node "Add3~37|cout"
+    Warning (332126): Node "Add3~41|cin"
+    Warning (332126): Node "Add4~81|dataa"
+    Warning (332126): Node "Add5~128|datac"
+    Warning (332126): Node "Add6~81|datac"
+    Warning (332126): Node "Add2~53|datac"
+    Warning (332126): Node "Add8~61|datac"
+    Warning (332126): Node "Add1~57|datac"
+    Warning (332126): Node "Add6~41|datad"
+    Warning (332126): Node "Add7~109|datac"
+    Warning (332126): Node "Add8~57|datac"
+    Warning (332126): Node "Add1~53|datac"
+    Warning (332126): Node "Add2~49|datac"
+    Warning (332126): Node "Add4~41|dataa"
+    Warning (332126): Node "Add5~124|datac"
+    Warning (332126): Node "Add6~45|datac"
+    Warning (332126): Node "Add5~60|datac"
+    Warning (332126): Node "Add6~37|datad"
+    Warning (332126): Node "Add7~17|datad"
+    Warning (332126): Node "Add6~113|datac"
+    Warning (332126): Node "Add5~44|datad"
+    Warning (332126): Node "Add7~1|datac"
+    Warning (332126): Node "Add7~1|cout"
+    Warning (332126): Node "Add7~5|cin"
+    Warning (332126): Node "Add7~1|sumout"
+    Warning (332126): Node "yt~0|datad"
+    Warning (332126): Node "Add8~41|datac"
+    Warning (332126): Node "Add1~37|datac"
+    Warning (332126): Node "Add2~109|datac"
+    Warning (332126): Node "Add1~33|datac"
+    Warning (332126): Node "Add3~13|datac"
+    Warning (332126): Node "Add2~33|datac"
+    Warning (332126): Node "Add1~93|datac"
+    Warning (332126): Node "Add3~1|datac"
+    Warning (332126): Node "Add2~21|datab"
+    Warning (332126): Node "Add4~5|datac"
+    Warning (332126): Node "Add6~13|datac"
+Critical Warning (332081): Design contains combinational loop of 1282 nodes. Estimating the delays through the loop.
+Warning (332125): Found combinational loop of 4 nodes File: D:/Uni/term6/dsd/DSD_Project/tea.vhd Line: 23
+    Warning (332126): Node "sum[31]~31|combout"
+    Warning (332126): Node "Add0~102|datac"
+    Warning (332126): Node "Add0~102|sumout"
+    Warning (332126): Node "sum[31]~31|dataf"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~118|sumout"
+    Warning (332126): Node "Add0~118|datad"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~98|datac"
+    Warning (332126): Node "Add0~98|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~94|datad"
+    Warning (332126): Node "Add0~94|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~122|datac"
+    Warning (332126): Node "Add0~122|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~114|datac"
+    Warning (332126): Node "Add0~114|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~90|datab"
+    Warning (332126): Node "Add0~90|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~86|datac"
+    Warning (332126): Node "Add0~86|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~82|datac"
+    Warning (332126): Node "Add0~82|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~78|sumout"
+    Warning (332126): Node "Add0~78|datad"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~74|datac"
+    Warning (332126): Node "Add0~74|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~110|datac"
+    Warning (332126): Node "Add0~110|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~70|datac"
+    Warning (332126): Node "Add0~70|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~66|datac"
+    Warning (332126): Node "Add0~66|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~62|datac"
+    Warning (332126): Node "Add0~62|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~58|datac"
+    Warning (332126): Node "Add0~58|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~54|datad"
+    Warning (332126): Node "Add0~54|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~50|datac"
+    Warning (332126): Node "Add0~50|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~46|datac"
+    Warning (332126): Node "Add0~46|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~42|dataf"
+    Warning (332126): Node "Add0~42|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~38|sumout"
+    Warning (332126): Node "Add0~38|datac"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~106|datad"
+    Warning (332126): Node "Add0~106|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~34|sumout"
+    Warning (332126): Node "Add0~34|datac"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~30|datad"
+    Warning (332126): Node "Add0~30|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~26|datac"
+    Warning (332126): Node "Add0~26|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~22|datac"
+    Warning (332126): Node "Add0~22|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~18|datad"
+    Warning (332126): Node "Add0~18|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~14|datac"
+    Warning (332126): Node "Add0~14|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~10|datac"
+    Warning (332126): Node "Add0~10|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~6|datad"
+    Warning (332126): Node "Add0~6|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: c:/intelfpga_lite/19.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 836
+    Warning (332126): Node "Add0~2|datac"
+    Warning (332126): Node "Add0~2|sumout"
+Warning (332125): Found combinational loop of 2 nodes File: D:/Uni/term6/dsd/DSD_Project/tea.vhd Line: 23
+    Warning (332126): Node "sum[0]~32|combout"
+    Warning (332126): Node "sum[0]~32|datad"
+Warning (332060): Node: state_reg was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch k3[1] is being clocked by state_reg
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (223000): Starting Vectorless Power Activity Estimation
+Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
+Info (223001): Completed Vectorless Power Activity Estimation
+Critical Warning (215050): HPS power is being analyzed for a device with an HPS without HPS power.
+Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specified board trace model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (215049): Average toggle rate for this design is 2.692 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 441.43 mW
+Info: Quartus Prime Power Analyzer was successful. 0 errors, 1387 warnings
+    Info: Peak virtual memory: 5221 megabytes
+    Info: Processing ended: Mon Jun 28 22:03:59 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:10
+
+

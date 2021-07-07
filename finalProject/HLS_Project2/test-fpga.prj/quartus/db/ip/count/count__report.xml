@@ -1,0 +1,1494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2021.06.28.21:09:42"
+ outputDirectory="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_AVMM_0_RW_ADDRESS_MAP"
+     type="AddressMap"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_AVMM_0_RW_ADDRESS_WIDTH"
+     type="AddressWidthType"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="avmm_0_rw" kind="avalon" start="1">
+   <property name="adaptsTo" value="" />
+   <property name="addressGroup" value="0" />
+   <property name="addressUnits" value="SYMBOLS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="dBSBigEndian" value="false" />
+   <property name="doStreamReads" value="false" />
+   <property name="doStreamWrites" value="false" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isAsynchronous" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isReadable" value="false" />
+   <property name="isWriteable" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maxAddressWidth" value="32" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="readLatency" value="1" />
+   <property name="readWaitTime" value="0" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="writeWaitTime" value="0" />
+   <port name="avmm_0_rw_address" direction="output" role="address" width="64" />
+   <port
+       name="avmm_0_rw_byteenable"
+       direction="output"
+       role="byteenable"
+       width="8" />
+   <port name="avmm_0_rw_read" direction="output" role="read" width="1" />
+   <port
+       name="avmm_0_rw_readdata"
+       direction="input"
+       role="readdata"
+       width="64" />
+   <port name="avmm_0_rw_write" direction="output" role="write" width="1" />
+   <port
+       name="avmm_0_rw_writedata"
+       direction="output"
+       role="writedata"
+       width="64" />
+  </interface>
+  <interface name="call" kind="conduit" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <port name="start" direction="input" role="valid" width="1" />
+   <port name="busy" direction="output" role="stall" width="1" />
+  </interface>
+  <interface name="clock" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clock" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="k" kind="conduit" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <port name="k" direction="input" role="data" width="64" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="resetn" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="return" kind="conduit" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <port name="done" direction="output" role="valid" width="1" />
+   <port name="stall" direction="input" role="stall" width="1" />
+  </interface>
+  <interface name="v" kind="conduit" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset" />
+   <port name="v" direction="input" role="data" width="64" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="count:1.0:AUTO_AVMM_0_RW_ADDRESS_MAP=,AUTO_AVMM_0_RW_ADDRESS_WIDTH=AddressWidth = -1,AUTO_CLOCK_CLOCK_DOMAIN=-1,AUTO_CLOCK_CLOCK_RATE=-1,AUTO_CLOCK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSXFC6D6F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6_H6,AUTO_GENERATION_ID=1624898375,AUTO_UNIQUE_ID=(count_internal:1.0:)"
+   instancePathKey="count"
+   kind="count"
+   version="1.0"
+   name="count">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_CLOCK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLOCK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_AVMM_0_RW_ADDRESS_WIDTH" value="AddressWidth = -1" />
+  <parameter name="AUTO_GENERATION_ID" value="1624898375" />
+  <parameter name="AUTO_DEVICE" value="5CSXFC6D6F31C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_AVMM_0_RW_ADDRESS_MAP" value="" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6_H6" />
+  <generatedFiles>
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/count.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/dspba_library_package.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/dspba_library.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_data_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ll_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ll_ram_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_valid_fifo_counter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_dspba_valid_fifo_counter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_staging_reg.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/hld_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/hld_fifo_zero_width.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_high_speed_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_low_latency_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_zero_latency_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_fanout_pipeline.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_std_synchronizer_nocut.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_tessellated_incr_decr_threshold.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_tessellated_incr_lookahead.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_reset_handler.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_lfsr.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_pop.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_push.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_token_fifo_counter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_pipeline.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_dspba_buffer.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_enable_sink.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/st_top.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_top.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_permute_address.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_pipelined.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_enabled.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_basic_coalescer.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_simple.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_streaming.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_burst_master.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_bursting_load_stores.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_non_aligned_write.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_read_cache.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_atomic.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_prefetch_block.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_wide_wrapper.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_streaming_prefetch.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_aligned_burst_coalesced_lsu.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_toggle_detect.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_debug_mem.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_burst_coalesced_pipelined_write.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_burst_coalesced_pipelined_read.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_fifo_stall_valid_lookahead.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ffwdsrc.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_full_detector.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_loop_limiter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_reset_wire.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_function_wrapper.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_function.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B2_sr_1.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B3_sr_0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B0_runOnce.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B0_runOnce_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B0_runOnce_merge_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i1_wt_limpop_count0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i1_wt_limpop_count_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_wt_limpush_count2.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_wt_limpush_count_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B0_runOnce_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B0_runOnce_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B1_start.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B1_start_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_iord_bl_do_unnamed_count1_count14.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_sfc_c0_wt_entry_count_c0_enter_count.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_sfc_exit_c0_wt_entry_count_c0_exit_count10.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_sfc_logic_c0_wt_entry_count_c0_enter_count4.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pipeline_keep_going9_count6.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_notexitcond10_count8.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B1_start_merge_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i1_throttle_pop_count12.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i1_throttle_pop_count_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count12_count39.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count13_count41.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count14_count43.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count15_count45.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count3_count18.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count5_count25.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count7_count29.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count8_count31.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_load_unnamed_count10_count35.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/readdata_reg_unnamed_count10_count4.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_load_unnamed_count11_count37.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/readdata_reg_unnamed_count11_count5.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_load_unnamed_count2_count15.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/readdata_reg_unnamed_count2_count0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_load_unnamed_count4_count20.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/readdata_reg_unnamed_count4_count1.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_load_unnamed_count6_count27.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/readdata_reg_unnamed_count6_count2.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_load_unnamed_count9_count33.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/readdata_reg_unnamed_count9_count3.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B1_start_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B1_start_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B2.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B2_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B2_merge_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_sfc_c0_while_body_count_c0_enter12_count.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_sfc_exit_c0_while_body_count_c0_exit14_count106.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_sfc_exit_c0_while_body_count_c0_exA0Zunt122_data_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_sfc_exit_c0_while_body_count_c0_exA0Znt_full_detector.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_sfc_logic_c0_while_body_count_c0_enter12_count47.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pipeline_keep_going_count53.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i32_sum_03_pop7_count72.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i32_y_02_pop8_count70.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i32_z_01_pop9_count66.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i4_cleanups_pop11_count49.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i4_initerations_pop10_count55.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i6_fpgaindvars_iv_pop6_count92.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_lastiniteration_count62.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_notexitcond_count95.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i32_sum_03_push7_count74.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i32_y_02_push8_count82.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i32_z_01_push9_count90.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i4_cleanups_push11_count98.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i4_initerations_push10_count58.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i6_fpgaindvars_iv_push6_count100.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_unnamed_count16_count64.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_unnamed_count17_count68.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_unnamed_count18_count77.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_unnamed_count19_count80.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_unnamed_count20_count85.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_unnamed_count21_count88.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count22_count102.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count23_count104.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B2_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B2_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B3.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B3_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_throttle_push_count120.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_throttle_push_count_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_add185_count115.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_add84_count109.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_arrayidx13_count113.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_v52_count107.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_iowr_bl_return_unnamed_count24_count119.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_store_memdep_1_count117.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_store_memdep_count111.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B3_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B3_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pipeline_keep_going9_count_sr.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pipeline_keep_going9_count_valid_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pipeline_keep_going_count_sr.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pipeline_keep_going_count_valid_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/loop_limiter_count0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_avm_to_ic.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ic_master_endpoint.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_arb_intf.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ic_intf.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ic_slave_endpoint.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ic_slave_rrp.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ic_slave_wrp.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_arb2.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ic_to_avm.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_internal.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/components/count/count.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/components/count/count_internal_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="count">queue size: 0 starting:count "count"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="count"><![CDATA["<b>count</b>" reuses <b>count_internal</b> "<b>submodules/count_internal</b>"]]></message>
+   <message level="Debug" culprit="count">queue size: 0 starting:count_internal "submodules/count_internal"</message>
+   <message level="Info" culprit="count_internal_inst"><![CDATA["<b>count</b>" instantiated <b>count_internal</b> "<b>count_internal_inst</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="count_internal:1.0:"
+   instancePathKey="count:.:count_internal_inst"
+   kind="count_internal"
+   version="1.0"
+   name="count_internal">
+  <generatedFiles>
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/dspba_library_package.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/dspba_library.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_data_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ll_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ll_ram_fifo.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_valid_fifo_counter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_dspba_valid_fifo_counter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_staging_reg.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/hld_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/hld_fifo_zero_width.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_high_speed_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_low_latency_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_zero_latency_fifo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_fanout_pipeline.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_std_synchronizer_nocut.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_tessellated_incr_decr_threshold.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_tessellated_incr_lookahead.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_reset_handler.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_lfsr.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_pop.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_push.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_token_fifo_counter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_pipeline.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_dspba_buffer.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_enable_sink.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/st_top.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_top.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_permute_address.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_pipelined.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_enabled.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_basic_coalescer.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_simple.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_streaming.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_burst_master.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_bursting_load_stores.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_non_aligned_write.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_read_cache.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_atomic.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_prefetch_block.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_wide_wrapper.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_streaming_prefetch.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_aligned_burst_coalesced_lsu.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_toggle_detect.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_debug_mem.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_burst_coalesced_pipelined_write.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/lsu_burst_coalesced_pipelined_read.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_fifo_stall_valid_lookahead.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ffwdsrc.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_full_detector.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_loop_limiter.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_reset_wire.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_function_wrapper.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_function.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B2_sr_1.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B3_sr_0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B0_runOnce.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B0_runOnce_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B0_runOnce_merge_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i1_wt_limpop_count0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i1_wt_limpop_count_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_wt_limpush_count2.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_wt_limpush_count_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B0_runOnce_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B0_runOnce_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B1_start.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B1_start_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_iord_bl_do_unnamed_count1_count14.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_sfc_c0_wt_entry_count_c0_enter_count.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_sfc_exit_c0_wt_entry_count_c0_exit_count10.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_sfc_logic_c0_wt_entry_count_c0_enter_count4.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pipeline_keep_going9_count6.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_notexitcond10_count8.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B1_start_merge_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i1_throttle_pop_count12.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i1_throttle_pop_count_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count12_count39.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count13_count41.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count14_count43.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count15_count45.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count3_count18.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count5_count25.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count7_count29.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count8_count31.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_load_unnamed_count10_count35.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/readdata_reg_unnamed_count10_count4.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_load_unnamed_count11_count37.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/readdata_reg_unnamed_count11_count5.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_load_unnamed_count2_count15.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/readdata_reg_unnamed_count2_count0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_load_unnamed_count4_count20.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/readdata_reg_unnamed_count4_count1.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_load_unnamed_count6_count27.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/readdata_reg_unnamed_count6_count2.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_load_unnamed_count9_count33.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/readdata_reg_unnamed_count9_count3.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B1_start_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B1_start_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B2.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B2_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B2_merge_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_sfc_c0_while_body_count_c0_enter12_count.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_sfc_exit_c0_while_body_count_c0_exit14_count106.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_sfc_exit_c0_while_body_count_c0_exA0Zunt122_data_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_sfc_exit_c0_while_body_count_c0_exA0Znt_full_detector.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_sfc_logic_c0_while_body_count_c0_enter12_count47.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pipeline_keep_going_count53.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i32_sum_03_pop7_count72.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i32_y_02_pop8_count70.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i32_z_01_pop9_count66.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i4_cleanups_pop11_count49.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i4_initerations_pop10_count55.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pop_i6_fpgaindvars_iv_pop6_count92.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_lastiniteration_count62.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_notexitcond_count95.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i32_sum_03_push7_count74.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i32_y_02_push8_count82.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i32_z_01_push9_count90.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i4_cleanups_push11_count98.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i4_initerations_push10_count58.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i6_fpgaindvars_iv_push6_count100.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_unnamed_count16_count64.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_unnamed_count17_count68.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_unnamed_count18_count77.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_unnamed_count19_count80.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_unnamed_count20_count85.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_unnamed_count21_count88.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count22_count102.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_src_unnamed_count23_count104.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B2_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B2_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B3.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/bb_count_B3_stall_region.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_throttle_push_count120.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_push_i1_throttle_push_count_reg.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_add185_count115.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_add84_count109.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_arrayidx13_count113.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_ffwd_dst_v52_count107.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_iowr_bl_return_unnamed_count24_count119.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_store_memdep_1_count117.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_store_memdep_count111.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B3_branch.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_B3_merge.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pipeline_keep_going9_count_sr.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pipeline_keep_going9_count_valid_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pipeline_keep_going_count_sr.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/i_acl_pipeline_keep_going_count_valid_fifo.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/loop_limiter_count0.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_avm_to_ic.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ic_master_endpoint.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_arb_intf.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ic_intf.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ic_slave_endpoint.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ic_slave_rrp.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ic_slave_wrp.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_arb2.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/acl_ic_to_avm.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/quartus/db/ip/count/submodules/count_internal.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="D:/intelFPGA/19.1/hls/examples/Project/test-fpga.prj/components/count/count_internal_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="count" as="count_internal_inst" />
+  <messages>
+   <message level="Debug" culprit="count">queue size: 0 starting:count_internal "submodules/count_internal"</message>
+   <message level="Info" culprit="count_internal_inst"><![CDATA["<b>count</b>" instantiated <b>count_internal</b> "<b>count_internal_inst</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>
